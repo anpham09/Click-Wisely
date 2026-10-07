@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://b87h5yun8ri11"]
+
+[ext_resource type="Texture2D" uid="uid://bervygxkjp1o6" path="res://models/assets/risks items/Poster_scan.png" id="1_g4pyr"]
+
+[node name="Poster_scan" type="StaticBody3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.05361423, 0, 0, 0, 0.05361423, 0, 0, 0, 0.05361423, 0, 0, 0)
+texture = ExtResource("1_g4pyr")

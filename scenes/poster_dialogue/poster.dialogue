@@ -1,0 +1,17 @@
+~ start
+Player: Try changing?
+
+- Ask whose USB this is
+	Player: Maybe I should ask around before touching it.
+	System: Good choice! An unknown USB drive could contain malware. It is safer to report it or give it to IT without plugging it into a computer.
+	=> END
+
+- Let's just go
+	Player: I should probably leave it alone.
+	System: Good choice! Not interacting with an unknown USB protects your device. In a workplace, you should also report suspicious devices to IT.
+	=> END
+
+- Plug it into a computer to see what's inside
+	Player: Maybe I can figure out whose USB this is by checking the files.
+	System: Be careful! This is not a safe choice. Unknown USB drives can contain malicious software that may infect a computer as soon as they are connected.
+	=> END

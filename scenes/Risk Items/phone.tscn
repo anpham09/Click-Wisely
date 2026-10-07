@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://de75nv5y37s1l"]
+
+[ext_resource type="PackedScene" uid="uid://cp3u8b83bmkic" path="res://models/assets/risks items/Game Phone small.glb" id="1_08mii"]
+
+[node name="Phone" type="StaticBody3D"]
+
+[node name="Game Phone small" parent="." instance=ExtResource("1_08mii")]

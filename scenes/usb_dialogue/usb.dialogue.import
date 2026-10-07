@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://csc5wcn15jfq1"
+path="res://.godot/imported/usb.dialogue-d5dcfd8c283cdbd67364491c3a7e3dea.tres"
+
+[deps]
+
+source_file="res://scenes/usb_dialogue/usb.dialogue"
+dest_files=["res://.godot/imported/usb.dialogue-d5dcfd8c283cdbd67364491c3a7e3dea.tres"]
+
+[params]
+
+defaults=true

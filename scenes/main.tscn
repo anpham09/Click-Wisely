@@ -1,0 +1,211 @@
+[gd_scene load_steps=13 format=3 uid="uid://bnpmrjo4jn6mi"]
+
+[ext_resource type="Script" uid="uid://b1bbplq6csmt5" path="res://script/main.gd" id="1_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://cxyhygc7agrkh" path="res://scenes/office.tscn" id="5_272bh"]
+[ext_resource type="PackedScene" uid="uid://bg5exoleaiamy" path="res://scenes/Risk Items/usb.tscn" id="5_lquwl"]
+[ext_resource type="Script" uid="uid://cg6u5t0ujxr63" path="res://script/usb_area.gd" id="5_tefeu"]
+[ext_resource type="PackedScene" uid="uid://b87h5yun8ri11" path="res://scenes/Risk Items/poster_scan.tscn" id="6_tefeu"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7dm0k"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_ig7tw"]
+sky_material = SubResource("ProceduralSkyMaterial_7dm0k")
+
+[sub_resource type="Environment" id="Environment_0xm2m"]
+background_mode = 2
+sky = SubResource("Sky_ig7tw")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tefeu"]
+albedo_color = Color(0.15294118, 0.047058824, 0.24705882, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o6xl0"]
+albedo_color = Color(0.15104717, 0.048481368, 0.24610907, 1)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_tbgi4"]
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_1bvp3")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_0xm2m")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25000006, 0.38302234, -0.2531396, 0.8883773, -0.32139382, 0.8651129, 0.38507885, -29.5, 12.9, 20)
+shadow_enabled = true
+
+[node name="Floor" type="CSGBox3D" parent="."]
+transform = Transform3D(7.25, 0, 0, 0, 1, 0, 0, 0, 1, 24.650003, -0.6, -29.7)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+size = Vector3(9.6, 0.2, 67)
+
+[node name="Walls&Doors" type="CSGCombiner3D" parent="."]
+material_override = SubResource("StandardMaterial3D_o6xl0")
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Walls&Doors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.100000024, 3.5500002, -2.0500002)
+use_collision = true
+size = Vector3(3.5, 8.1, 0.6)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Walls&Doors/CSGBox3D"]
+transform = Transform3D(1.8, 0, 0, 0, -4.3711392e-08, -4.0656004, 0, 1.0000001, -1.7771302e-07, 0, -1.4000001, -0.29999995)
+operation = 2
+radius = 0.90000004
+sides = 32
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Walls&Doors"]
+transform = Transform3D(1.5, 0, 0, 0, 1, 0, 0, 0, 0.99, 15.401459, 3.5500002, -2.0800002)
+size = Vector3(18.151392, 8.1, 0.6)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Walls&Doors"]
+transform = Transform3D(1.5, 0, 0, 0, 1, 0, 0, 0, 0.99, 9.586676, 2.972815, 3.875806)
+size = Vector3(26.305548, 6.94563, 0.11588135)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="Walls&Doors"]
+transform = Transform3D(0.0015183948, 0, -0.9899994, 0, 0.9999999, 0, 1.4999989, 0, 0.0010021534, -10.286908, 2.9016054, -15.0499)
+size = Vector3(26.305548, 7.0880494, 0.08723146)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="Walls&Doors"]
+transform = Transform3D(0.0015183948, 0, -0.9899994, 0, 0.9999999, 0, 1.4999989, 0, 0.0010021534, 29.527573, 2.972815, -15.0499)
+size = Vector3(26.305548, 6.94563, 0.08723146)
+
+[node name="CSGBox3D19" type="CSGBox3D" parent="Walls&Doors"]
+transform = Transform3D(1.5, 0, 0, 0, 1, 0, 0, 0, 0.99, 9.565002, 3.4, -62.98)
+size = Vector3(26, 7.8, 0.6)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Walls&Doors"]
+transform = Transform3D(1.5, 0, 0, 0, 1, 0, 0, 0, 0.99, -5.8678403, 3.5999994, -2.0800004)
+size = Vector3(5.756213, 8.2, 0.6)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Walls&Doors"]
+transform = Transform3D(-9.835063e-08, 0, -0.98010015, 0, 1, 0, 2.2500002, 0, -4.284154e-08, -9.898006, 3.3999996, -32.551704)
+size = Vector3(27.2, 8, 0.8)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Walls&Doors"]
+transform = Transform3D(-9.835063e-08, 0, -0.98010015, 0, 1, 0, 2.2500002, 0, -4.284154e-08, 28.700003, 3.3999996, -32.551704)
+size = Vector3(27.2, 8, 0.6)
+
+[node name="CSGBox3D18" type="CSGBox3D" parent="Walls&Doors"]
+transform = Transform3D(-8.211, 0, 0, 0, 8.007998, 0, 0, 0, -0.75999993, -3.2078505, 3.1615996, -44.61055)
+size = Vector3(1.6, 1.1, 0.3)
+
+[node name="wall column" type="CSGBox3D" parent="Walls&Doors"]
+transform = Transform3D(-8.211, 0, -6.644129e-08, 0, 8.007998, 0, 7.1782836e-07, 0, -0.76, -9.50305, 3.0623994, -2.6581492)
+size = Vector3(0.2, 1.1, 1.7)
+
+[node name="wall column2" type="CSGBox3D" parent="Walls&Doors"]
+transform = Transform3D(-8.211, 0, -6.644129e-08, 0, 8.007998, 0, 7.1782836e-07, 0, -0.76, 28.19695, 3.0623994, -2.5441492)
+size = Vector3(0.2, 1.1, 2)
+
+[node name="wall column3" type="CSGBox3D" parent="Walls&Doors"]
+transform = Transform3D(-8.211, 0, -6.644129e-08, 0, 8.007998, 0, 7.1782836e-07, 0, -0.76, 28.19695, 3.0623994, -62.758152)
+size = Vector3(0.2, 1.1, 1.7)
+
+[node name="wall column4" type="CSGBox3D" parent="Walls&Doors"]
+transform = Transform3D(-8.211, 0, -6.644129e-08, 0, 8.007998, 0, 7.1782836e-07, 0, -0.76, -9.303049, 3.0623994, -62.758152)
+size = Vector3(0.2, 1.1, 1.7)
+
+[node name="Center Sphere" type="CSGCombiner3D" parent="."]
+use_collision = true
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Center Sphere"]
+transform = Transform3D(5.51, 0, 0, 0, 5.4599996, 0, 0, 0, 5.0490003, 10.01, 1.6071429, -30.387573)
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="Center Sphere"]
+transform = Transform3D(0.91200006, 0, 0, 0, 0.94499993, 0, 0, 0, 0.9163, 12.29, 2.6571429, -29.63957)
+
+[node name="CSGSphere3D3" type="CSGSphere3D" parent="Center Sphere"]
+transform = Transform3D(0.91200006, 0, 0, 0, 0.94499993, 0, 0, 0, 0.9163, 9.63, 2.6571429, -32.444572)
+
+[node name="CSGSphere3D4" type="CSGSphere3D" parent="Center Sphere"]
+transform = Transform3D(0.91200006, 0, 0, 0, 0.94499993, 0, 0, 0, 0.9163, 9.820001, 1.8171427, -27.956573)
+
+[node name="CSGSphere3D7" type="CSGSphere3D" parent="Center Sphere"]
+transform = Transform3D(0.91200006, 0, 0, 0, 0.94499993, 0, 0, 0, 0.9163, 7.730002, 2.6571429, -30.01357)
+
+[node name="CSGSphere3D5" type="CSGSphere3D" parent="Center Sphere"]
+transform = Transform3D(0.91200006, 0, 0, 0, 0.94499993, 0, 0, 0, 0.9163, 9.63, 3.9171426, -31.13557)
+
+[node name="CSGSphere3D6" type="CSGSphere3D" parent="Center Sphere"]
+transform = Transform3D(0.91200006, 0, 0, 0, 0.94499993, 0, 0, 0, 0.9163, 12.29, 1.1871428, -31.322573)
+
+[node name="Sets of offices" type="CSGCombiner3D" parent="."]
+
+[node name="Office" parent="Sets of offices" instance=ExtResource("5_272bh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.390572, -0.2506456, -5.290144)
+
+[node name="ProtoController" parent="." instance=ExtResource("1_ig7tw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19999999, -0.6, 0.6)
+collision_layer = 2
+can_sprint = true
+can_freefly = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+
+[node name="Items" type="CSGCombiner3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.7, 0.2, -9.3)
+
+[node name="USBs" type="CSGCombiner3D" parent="Items"]
+
+[node name="USB" parent="Items/USBs" instance=ExtResource("5_lquwl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.6000001, 0)
+
+[node name="Area3D" type="Area3D" parent="Items/USBs/USB"]
+transform = Transform3D(1, 0, 0, 0, 1.0251968, 0, 0, 0, 1.3242002, 0, 0.27708387, 0.9217119)
+collision_mask = 2
+script = ExtResource("5_tefeu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Items/USBs/USB/Area3D"]
+transform = Transform3D(3.8916504, 0, 0, 0, 4.079704, 0, 0, 0, 4.4286184, 1.5388279, 2.7220187, -2.8318787)
+shape = SubResource("SphereShape3D_tbgi4")
+
+[node name="USB Label" type="Label3D" parent="Items/USBs/USB"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4198933, 5.283249, -2.8710852)
+billboard = 1
+text = "Unknown USB"
+font_size = 40
+outline_size = 24
+
+[node name="USB2" parent="Items/USBs" instance=ExtResource("5_lquwl")]
+transform = Transform3D(0.68235564, 0, -0.73102033, 0, 1, 0, 0.73102033, 0, 0.68235564, -16.414076, -3.6000001, -32.69441)
+
+[node name="Area3D" type="Area3D" parent="Items/USBs/USB2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.27708387, 0)
+collision_mask = 2
+script = ExtResource("5_tefeu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Items/USBs/USB2/Area3D"]
+transform = Transform3D(4.5383015, 0, -2.3841858e-07, 0, 5.480347, 0, 0, 0, 5.3376226, 1.5388279, 2.7220187, -2.8318787)
+shape = SubResource("SphereShape3D_tbgi4")
+
+[node name="USB Label2" type="Label3D" parent="Items/USBs/USB2"]
+transform = Transform3D(0.68235564, 0, 0.73102033, 0, 1, 0, -0.73102033, 0, 0.68235564, 0.89170074, 5.283249, -3.1808167)
+billboard = 1
+text = "Unknown USB"
+font_size = 40
+outline_size = 24
+
+[node name="Posters" type="CSGCombiner3D" parent="Items"]
+
+[node name="Poster_scan" parent="Items/Posters" instance=ExtResource("6_tefeu")]
+transform = Transform3D(0.010803364, 0, 0.9999416, 0, 1, 0, -0.9999416, 0, 0.010803364, -27.188639, 2.9788969, -2.1142054)
+
+[node name="Area3D2" type="Area3D" parent="Items/Posters/Poster_scan"]
+transform = Transform3D(0.015660068, 0, -1.3299886, 0, 1.2720108, 0, 1.4494712, 0, 0.014369174, -3.6275225, -3.0998902, -1.591917)
+collision_mask = 2
+script = ExtResource("5_tefeu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Items/Posters/Poster_scan/Area3D2"]
+transform = Transform3D(3.8916504, 0, 0, 0, 4.079704, 0, 0, 0, 4.4286184, 1.5388279, 2.7220187, -2.8318787)
+shape = SubResource("SphereShape3D_tbgi4")
+
+[connection signal="body_entered" from="Items/USBs/USB/Area3D" to="Items/USBs/USB/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Items/USBs/USB2/Area3D" to="Items/USBs/USB2/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Items/Posters/Poster_scan/Area3D2" to="Items/Posters/Poster_scan/Area3D2" method="_on_body_entered"]

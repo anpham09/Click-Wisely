@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bg5exoleaiamy"]
+
+[ext_resource type="PackedScene" uid="uid://dq5wdm3tt2aa0" path="res://models/assets/risks items/Game USB.glb" id="1_iniub"]
+
+[node name="USB" type="StaticBody3D"]
+
+[node name="Game USB" parent="." instance=ExtResource("1_iniub")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.31264925, -0.6998246, 0.6770526)
