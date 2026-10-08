@@ -1,0 +1,17 @@
+~ start
+Player: This poster invites employees to meet for coffee and snacks. What should I do?
+
+- Email the address right away
+	Player: It seems friendly. I'll email them.
+	System: Be careful! A friendly message can still be used as a phishing pretext.
+	=> END
+
+- Check the email address carefully
+	Player: I should look at the address before contacting them.
+	System: Good choice! Small changes can be easy to miss, like "google.com" and "gooogle.com."
+	=> END
+
+- Ask someone if the event is real
+	Player: I'll check with a coworker first.
+	System: Great choice! Verify unfamiliar events or contact information through someone you trust.
+	=> END

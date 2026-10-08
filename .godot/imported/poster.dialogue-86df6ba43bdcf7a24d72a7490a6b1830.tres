@@ -1,0 +1,148 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" uid="uid://dbs4435dsf3ry" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_tr3h3"]
+
+[resource]
+script = ExtResource("1_tr3h3")
+using_states = PackedStringArray()
+titles = {
+"start": "1"
+}
+character_names = PackedStringArray("Player", "System")
+first_title = "0"
+lines = {
+"0": {
+&"id": "0",
+&"next_id": "1",
+&"type": "title"
+},
+"1": {
+&"character": "Player",
+&"id": "1",
+&"next_id": "3",
+&"text": "Try changing?",
+&"type": "dialogue"
+},
+"10": {
+&"character": "System",
+&"id": "10",
+&"next_id": "11",
+&"text": "Good choice! Not interacting with an unknown USB protects your device. In a workplace, you should also report suspicious devices to IT.",
+&"type": "dialogue"
+},
+"11": {
+&"id": "11",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"12": {
+&"id": "12",
+&"next_id": "13",
+&"type": ""
+},
+"13": {
+&"id": "13",
+&"next_id": "14",
+&"text": "Plug it into a computer to see what's inside",
+&"type": "response"
+},
+"14": {
+&"character": "Player",
+&"id": "14",
+&"next_id": "15",
+&"text": "Maybe I can figure out whose USB this is by checking the files.",
+&"type": "dialogue"
+},
+"15": {
+&"character": "System",
+&"id": "15",
+&"next_id": "16",
+&"text": "Be careful! This is not a safe choice. Unknown USB drives can contain malicious software that may infect a computer as soon as they are connected.",
+&"type": "dialogue"
+},
+"16": {
+&"id": "16",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"17": {
+&"id": "17",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"2": {
+&"id": "2",
+&"next_id": "3",
+&"type": ""
+},
+"3": {
+&"id": "3",
+&"next_id": "4",
+&"responses": PackedStringArray("3", "8", "13"),
+&"text": "Ask whose USB this is",
+&"type": "response"
+},
+"4": {
+&"character": "Player",
+&"id": "4",
+&"next_id": "5",
+&"text": "Maybe I should ask around before touching it.",
+&"type": "dialogue"
+},
+"5": {
+&"character": "System",
+&"id": "5",
+&"next_id": "6",
+&"text": "Good choice! An unknown USB drive could contain malware. It is safer to report it or give it to IT without plugging it into a computer.",
+&"type": "dialogue"
+},
+"6": {
+&"id": "6",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"7": {
+&"id": "7",
+&"next_id": "8",
+&"type": ""
+},
+"8": {
+&"id": "8",
+&"next_id": "9",
+&"text": "Let's just go",
+&"type": "response"
+},
+"9": {
+&"character": "Player",
+&"id": "9",
+&"next_id": "10",
+&"text": "I should probably leave it alone.",
+&"type": "dialogue"
+}
+}
+raw_text = "~ start
+Player: Try changing?
+
+- Ask whose USB this is
+	Player: Maybe I should ask around before touching it.
+	System: Good choice! An unknown USB drive could contain malware. It is safer to report it or give it to IT without plugging it into a computer.
+	=> END
+
+- Let's just go
+	Player: I should probably leave it alone.
+	System: Good choice! Not interacting with an unknown USB protects your device. In a workplace, you should also report suspicious devices to IT.
+	=> END
+
+- Plug it into a computer to see what's inside
+	Player: Maybe I can figure out whose USB this is by checking the files.
+	System: Be careful! This is not a safe choice. Unknown USB drives can contain malicious software that may infect a computer as soon as they are connected.
+	=> END"
+metadata/dialogue_manager_version = "3.10.4"

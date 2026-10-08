@@ -1,0 +1,148 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" uid="uid://dbs4435dsf3ry" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_bsgp1"]
+
+[resource]
+script = ExtResource("1_bsgp1")
+using_states = PackedStringArray()
+titles = {
+"start": "1"
+}
+character_names = PackedStringArray("Player", "System")
+first_title = "0"
+lines = {
+"0": {
+&"id": "0",
+&"next_id": "1",
+&"type": "title"
+},
+"1": {
+&"character": "Player",
+&"id": "1",
+&"next_id": "3",
+&"text": "This poster invites employees to meet for coffee and snacks. What should I do?",
+&"type": "dialogue"
+},
+"10": {
+&"character": "System",
+&"id": "10",
+&"next_id": "11",
+&"text": "Good choice! Small changes can be easy to miss, like \"google.com\" and \"gooogle.com.\"",
+&"type": "dialogue"
+},
+"11": {
+&"id": "11",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"12": {
+&"id": "12",
+&"next_id": "13",
+&"type": ""
+},
+"13": {
+&"id": "13",
+&"next_id": "14",
+&"text": "Ask someone if the event is real",
+&"type": "response"
+},
+"14": {
+&"character": "Player",
+&"id": "14",
+&"next_id": "15",
+&"text": "I'll check with a coworker first.",
+&"type": "dialogue"
+},
+"15": {
+&"character": "System",
+&"id": "15",
+&"next_id": "16",
+&"text": "Great choice! Verify unfamiliar events or contact information through someone you trust.",
+&"type": "dialogue"
+},
+"16": {
+&"id": "16",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"17": {
+&"id": "17",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"2": {
+&"id": "2",
+&"next_id": "3",
+&"type": ""
+},
+"3": {
+&"id": "3",
+&"next_id": "4",
+&"responses": PackedStringArray("3", "8", "13"),
+&"text": "Email the address right away",
+&"type": "response"
+},
+"4": {
+&"character": "Player",
+&"id": "4",
+&"next_id": "5",
+&"text": "It seems friendly. I'll email them.",
+&"type": "dialogue"
+},
+"5": {
+&"character": "System",
+&"id": "5",
+&"next_id": "6",
+&"text": "Be careful! A friendly message can still be used as a phishing pretext.",
+&"type": "dialogue"
+},
+"6": {
+&"id": "6",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"7": {
+&"id": "7",
+&"next_id": "8",
+&"type": ""
+},
+"8": {
+&"id": "8",
+&"next_id": "9",
+&"text": "Check the email address carefully",
+&"type": "response"
+},
+"9": {
+&"character": "Player",
+&"id": "9",
+&"next_id": "10",
+&"text": "I should look at the address before contacting them.",
+&"type": "dialogue"
+}
+}
+raw_text = "~ start
+Player: This poster invites employees to meet for coffee and snacks. What should I do?
+
+- Email the address right away
+	Player: It seems friendly. I'll email them.
+	System: Be careful! A friendly message can still be used as a phishing pretext.
+	=> END
+
+- Check the email address carefully
+	Player: I should look at the address before contacting them.
+	System: Good choice! Small changes can be easy to miss, like \"google.com\" and \"gooogle.com.\"
+	=> END
+
+- Ask someone if the event is real
+	Player: I'll check with a coworker first.
+	System: Great choice! Verify unfamiliar events or contact information through someone you trust.
+	=> END"
+metadata/dialogue_manager_version = "3.10.4"

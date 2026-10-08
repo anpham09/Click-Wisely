@@ -1,10 +1,9 @@
 extends Area3D
 
-var dialogue_resource = preload("res://scenes/poster_dialogue/poster.dialogue")
-var usb_balloon_scene = preload("res://scenes/poster_dialogue/balloon.tscn")
+var dialogue_resource = preload("res://scenes/poster_dialogue (2)/poster2.dialogue")
+var usb_balloon_scene = preload("res://scenes/poster_dialogue (2)/balloon.tscn")
 
 @onready var usb: StaticBody3D = $".."
-
 
 func _on_body_entered(body: Node3D) -> void:
 	#DialogueManager.show_dialogue_balloon(dialogue_resource, "start")

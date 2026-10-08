@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://dcx4tel84spj0" path="res://scenes/poster_dialogue/balloon.gd" id="1_kjarq"]
 [ext_resource type="Resource" uid="uid://c4q6riod8pwkr" path="res://scenes/poster_dialogue/poster.dialogue" id="2_koh00"]
-[ext_resource type="Texture2D" uid="uid://pvbfbawgafiv" path="res://models/assets/dialogue_bg_img/Screenshot 2026-09-02 at 6.22.12 PM.png" id="3_84ndo"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="4_jvhm1"]
+[ext_resource type="Texture2D" uid="uid://lbid0ye1q1ij" path="res://scenes/poster_dialogue/posterrrr.png" id="4_koh00"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="5_12ral"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
@@ -84,9 +84,11 @@ theme = SubResource("Theme_qq3yp")
 [node name="TextureRect" type="TextureRect" parent="Balloon"]
 z_index = -1
 layout_mode = 0
-offset_right = 1184.0
-offset_bottom = 654.0
-texture = ExtResource("3_84ndo")
+offset_left = -20.0
+offset_top = -50.0
+offset_right = 1149.0
+offset_bottom = 714.0
+texture = ExtResource("4_koh00")
 
 [node name="MarginContainer" type="MarginContainer" parent="Balloon"]
 layout_mode = 1
@@ -144,7 +146,7 @@ autoplay = "progress"
 [node name="ResponsesMenu" type="VBoxContainer" parent="Balloon" node_paths=PackedStringArray("response_template")]
 unique_name_in_owner = true
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = -1
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5

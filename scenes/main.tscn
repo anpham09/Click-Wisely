@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bnpmrjo4jn6mi"]
+[gd_scene load_steps=14 format=3 uid="uid://bnpmrjo4jn6mi"]
 
 [ext_resource type="Script" uid="uid://b1bbplq6csmt5" path="res://script/main.gd" id="1_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_ig7tw"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bg5exoleaiamy" path="res://scenes/Risk Items/usb.tscn" id="5_lquwl"]
 [ext_resource type="Script" uid="uid://cg6u5t0ujxr63" path="res://script/usb_area.gd" id="5_tefeu"]
 [ext_resource type="PackedScene" uid="uid://b87h5yun8ri11" path="res://scenes/Risk Items/poster_scan.tscn" id="6_tefeu"]
+[ext_resource type="PackedScene" uid="uid://yjusiqkrbuut" path="res://scenes/Risk Items/poster_email.tscn" id="7_o6xl0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7dm0k"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -27,6 +28,7 @@ albedo_color = Color(0.15294118, 0.047058824, 0.24705882, 1)
 albedo_color = Color(0.15104717, 0.048481368, 0.24610907, 1)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_tbgi4"]
+radius = 0.73027414
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_1bvp3")
@@ -195,7 +197,7 @@ outline_size = 24
 [node name="Posters" type="CSGCombiner3D" parent="Items"]
 
 [node name="Poster_scan" parent="Items/Posters" instance=ExtResource("6_tefeu")]
-transform = Transform3D(0.010803364, 0, 0.9999416, 0, 1, 0, -0.9999416, 0, 0.010803364, -27.188639, 2.9788969, -2.1142054)
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -27.188639, 2.6947892, -2.1142054)
 
 [node name="Area3D2" type="Area3D" parent="Items/Posters/Poster_scan"]
 transform = Transform3D(0.015660068, 0, -1.3299886, 0, 1.2720108, 0, 1.4494712, 0, 0.014369174, -3.6275225, -3.0998902, -1.591917)
@@ -206,6 +208,73 @@ script = ExtResource("5_tefeu")
 transform = Transform3D(3.8916504, 0, 0, 0, 4.079704, 0, 0, 0, 4.4286184, 1.5388279, 2.7220187, -2.8318787)
 shape = SubResource("SphereShape3D_tbgi4")
 
+[node name="Poster 1 Label" type="Label3D" parent="Items/Posters/Poster_scan"]
+transform = Transform3D(0.010803356, 0, -0.9999417, 0, 1, 0, 0.9999417, 0, 0.010803356, -0.2955513, 1.9407167, 1.0516443)
+billboard = 1
+text = "Unknown Fundraiswer"
+font_size = 40
+outline_size = 24
+
+[node name="Poster_scan2" parent="Items/Posters" instance=ExtResource("6_tefeu")]
+transform = Transform3D(1.192488e-08, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, 1.192488e-08, 10.700001, 2.695, -43.614727)
+
+[node name="Area3D2" type="Area3D" parent="Items/Posters/Poster_scan2"]
+transform = Transform3D(0.015660068, 0, -1.3299886, 0, 1.2720108, 0, 1.4494712, 0, 0.014369174, -3.6275225, -3.0998902, -1.591917)
+collision_mask = 2
+script = ExtResource("5_tefeu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Items/Posters/Poster_scan2/Area3D2"]
+transform = Transform3D(3.8916504, 0, 0, 0, 4.079704, 0, 0, 0, 4.4286184, 1.5388279, 2.7220187, -2.8318787)
+shape = SubResource("SphereShape3D_tbgi4")
+
+[node name="Poster 1 Label" type="Label3D" parent="Items/Posters/Poster_scan2"]
+transform = Transform3D(0.010803356, 0, -0.9999417, 0, 1, 0, 0.9999417, 0, 0.010803356, -0.2955513, 1.9407167, 1.0516443)
+billboard = 1
+text = "Unknown Fundraiswer"
+font_size = 40
+outline_size = 24
+
+[node name="Poster_email" parent="Items/Posters" instance=ExtResource("7_o6xl0")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -27.189, 2.695, -48.041)
+
+[node name="Area3D2" type="Area3D" parent="Items/Posters/Poster_email"]
+transform = Transform3D(0.01517948, 0, -1.3299931, 0, 1.2720108, 0, 1.4494762, 0, 0.013928202, -3.6265068, -3.100101, -1.5927658)
+collision_mask = 2
+script = ExtResource("5_tefeu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Items/Posters/Poster_email/Area3D2"]
+transform = Transform3D(3.8916504, 0, 0, 0, 4.079704, 0, 0, 0, 4.4286184, 1.5388279, 2.7220187, -2.8318787)
+shape = SubResource("SphereShape3D_tbgi4")
+
+[node name="Poster 2 Label" type="Label3D" parent="Items/Posters/Poster_email"]
+transform = Transform3D(0.010471814, 0, -0.99994516, 0, 1, 0, 0.99994516, 0, 0.010471814, -0.2954178, 1.940506, 1.0519018)
+billboard = 1
+text = "Unknown Event"
+font_size = 40
+outline_size = 24
+
+[node name="Poster_email2" parent="Items/Posters" instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 10.700001, 2.695, -9.51854)
+
+[node name="Area3D2" type="Area3D" parent="Items/Posters/Poster_email2"]
+transform = Transform3D(0.01517948, 0, -1.3299931, 0, 1.2720108, 0, 1.4494762, 0, 0.013928202, -3.6265068, -3.100101, -1.5927658)
+collision_mask = 2
+script = ExtResource("5_tefeu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Items/Posters/Poster_email2/Area3D2"]
+transform = Transform3D(3.8916504, 0, 0, 0, 4.079704, 0, 0, 0, 4.4286184, 1.5388279, 2.7220187, -2.8318787)
+shape = SubResource("SphereShape3D_tbgi4")
+
+[node name="Poster 2 Label" type="Label3D" parent="Items/Posters/Poster_email2"]
+transform = Transform3D(0.010471814, 0, -0.99994516, 0, 1, 0, 0.99994516, 0, 0.010471814, -0.2954178, 1.940506, 1.0519018)
+billboard = 1
+text = "Unknown Event"
+font_size = 40
+outline_size = 24
+
 [connection signal="body_entered" from="Items/USBs/USB/Area3D" to="Items/USBs/USB/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Items/USBs/USB2/Area3D" to="Items/USBs/USB2/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Items/Posters/Poster_scan/Area3D2" to="Items/Posters/Poster_scan/Area3D2" method="_on_body_entered"]
+[connection signal="body_entered" from="Items/Posters/Poster_scan2/Area3D2" to="Items/Posters/Poster_scan2/Area3D2" method="_on_body_entered"]
+[connection signal="body_entered" from="Items/Posters/Poster_email/Area3D2" to="Items/Posters/Poster_email/Area3D2" method="_on_body_entered"]
+[connection signal="body_entered" from="Items/Posters/Poster_email2/Area3D2" to="Items/Posters/Poster_email2/Area3D2" method="_on_body_entered"]

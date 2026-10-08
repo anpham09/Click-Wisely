@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://0dff3ylaypte"
+path="res://.godot/imported/poster2.dialogue-e6eb3fabb48959fa1d2e3530be25f592.tres"
+
+[deps]
+
+source_file="res://scenes/poster_dialogue (2)/poster2.dialogue"
+dest_files=["res://.godot/imported/poster2.dialogue-e6eb3fabb48959fa1d2e3530be25f592.tres"]
+
+[params]
+
+defaults=true
