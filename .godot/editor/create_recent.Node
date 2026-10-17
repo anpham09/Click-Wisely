@@ -1,1 +1,13 @@
 ColorRect
+Button
+TextureRect
+VideoStreamPlayer
+AnimationPlayer
+MeshInstance3D
+CSGCombiner3D
+StaticBody3D
+CSGBox3D
+CollisionShape3D
+DirectionalLight3D
+OmniLight3D
+SpotLight3D

@@ -1,7 +1,7 @@
 extends Area3D
 
-var dialogue_resource = preload("res://scenes/poster_dialogue (2)/poster2.dialogue")
-var usb_balloon_scene = preload("res://scenes/poster_dialogue (2)/balloon.tscn")
+var dialogue_resource = preload("res://scenes/usb_dialogue/usb.dialogue")
+var usb_balloon_scene = preload("res://scenes/usb_dialogue/balloon.tscn")
 
 @onready var usb: StaticBody3D = $".."
 

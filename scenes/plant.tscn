@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5h0kiedxsiye"]
+
+[ext_resource type="PackedScene" uid="uid://4qd84165dy8i" path="res://models/decorations/Game Floor Plant ZZ.glb" id="1_fi0kw"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_fi0kw"]
+height = 0.9350586
+radius = 0.24560547
+
+[node name="Plant" type="StaticBody3D"]
+
+[node name="Game Floor Plant ZZ" parent="." instance=ExtResource("1_fi0kw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3161814, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 2.7854147, 1.8401175, -2.4672332)
+shape = SubResource("CylinderShape3D_fi0kw")

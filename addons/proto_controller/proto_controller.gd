@@ -43,6 +43,14 @@ extends CharacterBody3D
 @export var input_sprint : String = "sprint"
 ## Name of Input Action to toggle freefly mode.
 @export var input_freefly : String = "freefly"
+@export var rotation_speed: float = 1.0
+func _process(delta: float) -> void:
+	# Get rotation input from the built-in UI arrow keys
+	var turn_direction: float = Input.get_axis("ui_right", "ui_left")
+	
+	# Rotate around the Y-axis (left/right turning)
+	if turn_direction != 0:
+		rotate_y(turn_direction * rotation_speed * delta)
 
 var mouse_captured : bool = false
 var look_rotation : Vector2
