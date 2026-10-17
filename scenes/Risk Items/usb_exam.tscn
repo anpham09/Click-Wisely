@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://do72stomwxql3"]
+
+[ext_resource type="PackedScene" uid="uid://cprybiewcck30" path="res://models/assets/risks items/Game USB final exam Key.glb" id="1_dnh0d"]
+
+[node name="USB" type="StaticBody3D"]
+
+[node name="Game USB final exam Key" parent="." instance=ExtResource("1_dnh0d")]

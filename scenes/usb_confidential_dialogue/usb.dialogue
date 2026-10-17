@@ -1,5 +1,5 @@
 ~ start
-Player: You see a USB drive on the floor. What do you want to do?
+Player: This is confidential USB. You see a USB drive on the floor. What do you want to do?
 
 - Ask whose USB this is
 	Player: Maybe I should ask around before touching it.

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://btah4c1smerri"]
+
+[ext_resource type="PackedScene" uid="uid://bntr63e2jceua" path="res://models/assets/risks items/Game USB confidential.glb" id="1_ob2xq"]
+
+[node name="USB_Confidential" type="StaticBody3D"]
+
+[node name="Game USB confidential" parent="." instance=ExtResource("1_ob2xq")]

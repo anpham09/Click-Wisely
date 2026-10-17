@@ -1,9 +1,11 @@
-[gd_scene load_steps=21 format=3 uid="uid://bnpmrjo4jn6mi"]
+[gd_scene load_steps=23 format=3 uid="uid://bnpmrjo4jn6mi"]
 
 [ext_resource type="Script" uid="uid://b1bbplq6csmt5" path="res://script/main.gd" id="1_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://bg5exoleaiamy" path="res://scenes/Risk Items/usb.tscn" id="5_lquwl"]
 [ext_resource type="Script" uid="uid://cg6u5t0ujxr63" path="res://script/usb_area.gd" id="5_tefeu"]
+[ext_resource type="Script" uid="uid://d2ejye5xbxo04" path="res://script/confidential_usb_area.gd" id="5_ya4ey"]
+[ext_resource type="Script" uid="uid://b0fh32v35kaeo" path="res://script/exam_usb_area.gd" id="6_eb6dy"]
 [ext_resource type="PackedScene" uid="uid://b87h5yun8ri11" path="res://scenes/Risk Items/poster_scan.tscn" id="6_tefeu"]
 [ext_resource type="PackedScene" uid="uid://yjusiqkrbuut" path="res://scenes/Risk Items/poster_email.tscn" id="7_o6xl0"]
 [ext_resource type="Script" uid="uid://c5sq2kn3i7doq" path="res://script/poster_scan_area.gd" id="7_tipki"]
@@ -560,41 +562,60 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.7, 0.2, -9.3)
 
 [node name="USBs" type="CSGCombiner3D" parent="Items"]
 
-[node name="USB" parent="Items/USBs" instance=ExtResource("5_lquwl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.467173, -3.6000001, 0)
+[node name="Regular USB" parent="Items/USBs" instance=ExtResource("5_lquwl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6488657, -3.6000001, -7.390235)
 
-[node name="Area3D" type="Area3D" parent="Items/USBs/USB"]
+[node name="Area3D" type="Area3D" parent="Items/USBs/Regular USB"]
 transform = Transform3D(1, 0, 0, 0, 1.0251968, 0, 0, 0, 1.3242002, 0, 0.27708387, 0.9217119)
 collision_mask = 2
 script = ExtResource("5_tefeu")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Items/USBs/USB/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Items/USBs/Regular USB/Area3D"]
 transform = Transform3D(3.8916504, 0, 0, 0, 4.079704, 0, 0, 0, 4.4286184, 1.5388279, 2.7220187, -2.8318787)
 shape = SubResource("SphereShape3D_tbgi4")
 
-[node name="USB Label" type="Label3D" parent="Items/USBs/USB"]
+[node name="USB Label" type="Label3D" parent="Items/USBs/Regular USB"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4198933, 5.283249, -2.8710852)
 billboard = 1
 text = "Unknown USB"
-font_size = 40
+font_size = 80
 outline_size = 24
 
-[node name="USB2" parent="Items/USBs" instance=ExtResource("5_lquwl")]
+[node name="Confidential USB" parent="Items/USBs" instance=ExtResource("5_lquwl")]
 transform = Transform3D(0.68235564, 0, -0.73102033, 0, 1, 0, 0.73102033, 0, 0.68235564, -16.414076, -3.6000001, -32.69441)
 
-[node name="Area3D" type="Area3D" parent="Items/USBs/USB2"]
+[node name="Area3D" type="Area3D" parent="Items/USBs/Confidential USB"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.27708387, 0)
 collision_mask = 2
-script = ExtResource("5_tefeu")
+script = ExtResource("5_ya4ey")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Items/USBs/USB2/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Items/USBs/Confidential USB/Area3D"]
 transform = Transform3D(4.5383015, 0, -2.3841858e-07, 0, 5.480347, 0, 0, 0, 5.3376226, 1.5388279, 2.7220187, -2.8318787)
 shape = SubResource("SphereShape3D_tbgi4")
 
-[node name="USB Label2" type="Label3D" parent="Items/USBs/USB2"]
+[node name="USB Label2" type="Label3D" parent="Items/USBs/Confidential USB"]
 transform = Transform3D(0.68235564, 0, 0.73102033, 0, 1, 0, -0.73102033, 0, 0.68235564, 0.89170074, 5.283249, -3.1808167)
 billboard = 1
-text = "Unknown USB"
+text = "Confidential USB"
+font_size = 40
+outline_size = 24
+
+[node name="Exam USB" parent="Items/USBs" instance=ExtResource("5_lquwl")]
+transform = Transform3D(0.68235564, 0, -0.73102033, 0, 1, 0, 0.73102033, 0, 0.68235564, 2.1015015, -3.6000001, -22.531925)
+
+[node name="Area3D" type="Area3D" parent="Items/USBs/Exam USB"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.27708387, 0)
+collision_mask = 2
+script = ExtResource("6_eb6dy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Items/USBs/Exam USB/Area3D"]
+transform = Transform3D(4.5383015, 0, -2.3841858e-07, 0, 5.480347, 0, 0, 0, 5.3376226, 1.5388279, 2.7220187, -2.8318787)
+shape = SubResource("SphereShape3D_tbgi4")
+
+[node name="USB Label2" type="Label3D" parent="Items/USBs/Exam USB"]
+transform = Transform3D(0.68235564, 0, 0.73102033, 0, 1, 0, -0.73102033, 0, 0.68235564, -10.880921, 5.283249, -14.16972)
+billboard = 1
+text = "Final Exam Key?"
 font_size = 40
 outline_size = 24
 
@@ -621,6 +642,7 @@ outline_size = 24
 
 [node name="Poster_scan2" parent="Items/Posters" instance=ExtResource("6_tefeu")]
 transform = Transform3D(1.192488e-08, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, 1.192488e-08, 10.700001, 2.695, -43.614727)
+visible = false
 
 [node name="Area3D2" type="Area3D" parent="Items/Posters/Poster_scan2"]
 transform = Transform3D(0.015660068, 0, -1.3299886, 0, 1.2720108, 0, 1.4494712, 0, 0.014369174, -3.6275225, -3.0998902, -1.591917)
@@ -659,6 +681,7 @@ outline_size = 24
 
 [node name="Poster_email2" parent="Items/Posters" instance=ExtResource("7_o6xl0")]
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 10.700001, 2.695, -9.51854)
+visible = false
 
 [node name="Area3D2" type="Area3D" parent="Items/Posters/Poster_email2"]
 transform = Transform3D(0.01517948, 0, -1.3299931, 0, 1.2720108, 0, 1.4494762, 0, 0.013928202, -3.6265068, -3.100101, -1.5927658)
@@ -1002,8 +1025,9 @@ mesh = SubResource("BoxMesh_trceg")
 transform = Transform3D(0.11482352, 0, 0, 0, -2.2454927e-07, -0.13065165, 0, 5.1370883, -5.710965e-09, 28.448463, 3.9596162, -41.42594)
 mesh = SubResource("BoxMesh_trceg")
 
-[connection signal="body_entered" from="Items/USBs/USB/Area3D" to="Items/USBs/USB/Area3D" method="_on_body_entered"]
-[connection signal="body_entered" from="Items/USBs/USB2/Area3D" to="Items/USBs/USB2/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Items/USBs/Regular USB/Area3D" to="Items/USBs/Regular USB/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Items/USBs/Confidential USB/Area3D" to="Items/USBs/Confidential USB/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Items/USBs/Exam USB/Area3D" to="Items/USBs/Exam USB/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Items/Posters/Poster_scan/Area3D2" to="Items/Posters/Poster_scan/Area3D2" method="_on_body_entered"]
 [connection signal="body_entered" from="Items/Posters/Poster_scan2/Area3D2" to="Items/Posters/Poster_scan2/Area3D2" method="_on_body_entered"]
 [connection signal="body_entered" from="Items/Posters/Poster_email/Area3D2" to="Items/Posters/Poster_email/Area3D2" method="_on_body_entered"]

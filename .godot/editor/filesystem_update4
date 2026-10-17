@@ -17,3 +17,8 @@ res://scenes/usb_confidential_dialogue/balloon.gd
 res://scenes/usb_confidential_dialogue/balloon.tscn
 res://scenes/usb_exam_dialogue/balloon.gd
 res://scenes/usb_exam_dialogue/balloon.tscn
+res://scenes/usb_dialogue/balloon.tscn
+res://scenes/Risk Items/usb_confidential.tscn
+res://scenes/Risk Items/usb_exam.tscn
+res://script/confidential_usb_area.gd
+res://script/exam_usb_area.gd
