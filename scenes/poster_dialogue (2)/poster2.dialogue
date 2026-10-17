@@ -1,17 +1,17 @@
 ~ start
 Player: This poster invites employees to meet for coffee and snacks. What should I do?
 
-- Email the address right away
-	Player: It seems friendly. I'll email them.
-	System: Be careful! A friendly message can still be used as a phishing pretext.
+- Check whether the email address looks like a company address, then contact it
+	Player: The address looks normal, so it should probably be safe.
+	System: Safer, but lookalike addresses can be easy to miss, like google.com and gooogle.com.
 	=> END
 
-- Check the email address carefully
-	Player: I should look at the address before contacting them.
-	System: Good choice! Small changes can be easy to miss, like "google.com" and "gooogle.com."
+- Ask a coworker if they have heard about the event
+	Player: If someone else knows about it, that should make it trustworthy.
+	System: Not enough! Your coworker may have seen the same poster without verifying it either.
 	=> END
 
-- Ask someone if the event is real
-	Player: I'll check with a coworker first.
-	System: Great choice! Verify unfamiliar events or contact information through someone you trust.
+- Verify the event through an official workplace source first
+	Player: I'll check the company calendar or official directory before contacting anyone.
+	System: Best choice! You verified the event independently instead of trusting the poster or email address.
 	=> END

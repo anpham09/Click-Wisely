@@ -27,7 +27,7 @@ lines = {
 &"character": "System",
 &"id": "10",
 &"next_id": "11",
-&"text": "Good choice! Small changes can be easy to miss, like \"google.com\" and \"gooogle.com.\"",
+&"text": "Not enough! Your coworker may have seen the same poster without verifying it either.",
 &"type": "dialogue"
 },
 "11": {
@@ -45,21 +45,21 @@ lines = {
 "13": {
 &"id": "13",
 &"next_id": "14",
-&"text": "Ask someone if the event is real",
+&"text": "Verify the event through an official workplace source first",
 &"type": "response"
 },
 "14": {
 &"character": "Player",
 &"id": "14",
 &"next_id": "15",
-&"text": "I'll check with a coworker first.",
+&"text": "I'll check the company calendar or official directory before contacting anyone.",
 &"type": "dialogue"
 },
 "15": {
 &"character": "System",
 &"id": "15",
 &"next_id": "16",
-&"text": "Great choice! Verify unfamiliar events or contact information through someone you trust.",
+&"text": "Best choice! You verified the event independently instead of trusting the poster or email address.",
 &"type": "dialogue"
 },
 "16": {
@@ -85,21 +85,21 @@ lines = {
 &"id": "3",
 &"next_id": "4",
 &"responses": PackedStringArray("3", "8", "13"),
-&"text": "Email the address right away",
+&"text": "Check whether the email address looks like a company address, then contact it",
 &"type": "response"
 },
 "4": {
 &"character": "Player",
 &"id": "4",
 &"next_id": "5",
-&"text": "It seems friendly. I'll email them.",
+&"text": "The address looks normal, so it should probably be safe.",
 &"type": "dialogue"
 },
 "5": {
 &"character": "System",
 &"id": "5",
 &"next_id": "6",
-&"text": "Be careful! A friendly message can still be used as a phishing pretext.",
+&"text": "Safer, but lookalike addresses can be easy to miss, like google.com and gooogle.com.",
 &"type": "dialogue"
 },
 "6": {
@@ -117,32 +117,32 @@ lines = {
 "8": {
 &"id": "8",
 &"next_id": "9",
-&"text": "Check the email address carefully",
+&"text": "Ask a coworker if they have heard about the event",
 &"type": "response"
 },
 "9": {
 &"character": "Player",
 &"id": "9",
 &"next_id": "10",
-&"text": "I should look at the address before contacting them.",
+&"text": "If someone else knows about it, that should make it trustworthy.",
 &"type": "dialogue"
 }
 }
 raw_text = "~ start
 Player: This poster invites employees to meet for coffee and snacks. What should I do?
 
-- Email the address right away
-	Player: It seems friendly. I'll email them.
-	System: Be careful! A friendly message can still be used as a phishing pretext.
+- Check whether the email address looks like a company address, then contact it
+	Player: The address looks normal, so it should probably be safe.
+	System: Safer, but lookalike addresses can be easy to miss, like google.com and gooogle.com.
 	=> END
 
-- Check the email address carefully
-	Player: I should look at the address before contacting them.
-	System: Good choice! Small changes can be easy to miss, like \"google.com\" and \"gooogle.com.\"
+- Ask a coworker if they have heard about the event
+	Player: If someone else knows about it, that should make it trustworthy.
+	System: Not enough! Your coworker may have seen the same poster without verifying it either.
 	=> END
 
-- Ask someone if the event is real
-	Player: I'll check with a coworker first.
-	System: Great choice! Verify unfamiliar events or contact information through someone you trust.
+- Verify the event through an official workplace source first
+	Player: I'll check the company calendar or official directory before contacting anyone.
+	System: Best choice! You verified the event independently instead of trusting the poster or email address.
 	=> END"
 metadata/dialogue_manager_version = "3.10.4"

@@ -43,7 +43,7 @@ extends CharacterBody3D
 @export var input_sprint : String = "sprint"
 ## Name of Input Action to toggle freefly mode.
 @export var input_freefly : String = "freefly"
-@export var rotation_speed: float = 1.0
+@export var rotation_speed: float = 0.8
 func _process(delta: float) -> void:
 	# Get rotation input from the built-in UI arrow keys
 	var turn_direction: float = Input.get_axis("ui_right", "ui_left")
@@ -184,3 +184,26 @@ func check_input_mappings():
 	if can_freefly and not InputMap.has_action(input_freefly):
 		push_error("Freefly disabled. No InputAction found for input_freefly: " + input_freefly)
 		can_freefly = false
+
+
+var score = 0
+@onready var score_label: Label = $Label
+
+var clear_dialogue_resource = preload("res://scenes/tiles_dialogue/tiles_clear/clear_tiles.dialogue")
+var clear_balloon_scene = preload("res://scenes/tiles_dialogue/tiles_clear/balloon.tscn")
+
+@onready var correct_hole: CSGBox3D = $"../Floor/Correct Hole"
+
+func add_item():
+	score += 1
+	score_label.text = "Items: " + str(score) + "/5"
+
+func check_items():
+	if score == 5:
+		await DialogueManager.dialogue_ended
+		
+		var clear_balloon = clear_balloon_scene.instantiate()
+		get_tree().current_scene.add_child(clear_balloon)
+		clear_balloon.start(clear_dialogue_resource, "start")
+		
+		correct_hole.visible = true

@@ -20,14 +20,14 @@ lines = {
 &"character": "Player",
 &"id": "1",
 &"next_id": "3",
-&"text": "You see a USB drive on the floor. What do you want to do?",
+&"text": "You find a USB drive labeled \"Final Exam Key\" on the floor. What do you want to do?",
 &"type": "dialogue"
 },
 "10": {
 &"character": "System",
 &"id": "10",
 &"next_id": "11",
-&"text": "Good choice! Not interacting with an unknown USB protects your device. In a workplace, you should also report suspicious devices to IT.",
+&"text": "Not a safe solution! Passing the USB to someone else only transfers the risk to another person.",
 &"type": "dialogue"
 },
 "11": {
@@ -45,21 +45,21 @@ lines = {
 "13": {
 &"id": "13",
 &"next_id": "14",
-&"text": "Plug it into a computer to see what's inside",
+&"text": "Leave it alone and report it",
 &"type": "response"
 },
 "14": {
 &"character": "Player",
 &"id": "14",
 &"next_id": "15",
-&"text": "Maybe I can figure out whose USB this is by checking the files.",
+&"text": "The label is tempting, but I shouldn't trust an unknown USB.",
 &"type": "dialogue"
 },
 "15": {
 &"character": "System",
 &"id": "15",
 &"next_id": "16",
-&"text": "Be careful! This is not a safe choice. Unknown USB drives can contain malicious software that may infect a computer as soon as they are connected.",
+&"text": "Best choice! Attackers can use interesting labels to encourage curiosity. USB drives with tempting labels were proved to be opened more often.",
 &"type": "dialogue"
 },
 "16": {
@@ -85,21 +85,21 @@ lines = {
 &"id": "3",
 &"next_id": "4",
 &"responses": PackedStringArray("3", "8", "13"),
-&"text": "Ask whose USB this is",
+&"text": "Plug it into my personal laptop instead of a school computer",
 &"type": "response"
 },
 "4": {
 &"character": "Player",
 &"id": "4",
 &"next_id": "5",
-&"text": "Maybe I should ask around before touching it.",
+&"text": "If I use my own laptop, at least I won't put the school computers at risk.",
 &"type": "dialogue"
 },
 "5": {
 &"character": "System",
 &"id": "5",
 &"next_id": "6",
-&"text": "Good choice! An unknown USB drive could contain malware. It is safer to report it or give it to IT without plugging it into a computer.",
+&"text": "Still risky! A personal device can be infected too. The label may be there specifically to make you curious enough to plug it in.",
 &"type": "dialogue"
 },
 "6": {
@@ -117,32 +117,32 @@ lines = {
 "8": {
 &"id": "8",
 &"next_id": "9",
-&"text": "Let's just go",
+&"text": "Ask a friend if they want to check what's inside",
 &"type": "response"
 },
 "9": {
 &"character": "Player",
 &"id": "9",
 &"next_id": "10",
-&"text": "I should probably leave it alone.",
+&"text": "Maybe someone else can see if it's actually an exam key.",
 &"type": "dialogue"
 }
 }
 raw_text = "~ start
-Player: You see a USB drive on the floor. What do you want to do?
+Player: You find a USB drive labeled \"Final Exam Key\" on the floor. What do you want to do?
 
-- Ask whose USB this is
-	Player: Maybe I should ask around before touching it.
-	System: Good choice! An unknown USB drive could contain malware. It is safer to report it or give it to IT without plugging it into a computer.
+- Plug it into my personal laptop instead of a school computer
+	Player: If I use my own laptop, at least I won't put the school computers at risk.
+	System: Still risky! A personal device can be infected too. The label may be there specifically to make you curious enough to plug it in.
 	=> END
 
-- Let's just go
-	Player: I should probably leave it alone.
-	System: Good choice! Not interacting with an unknown USB protects your device. In a workplace, you should also report suspicious devices to IT.
+- Ask a friend if they want to check what's inside
+	Player: Maybe someone else can see if it's actually an exam key.
+	System: Not a safe solution! Passing the USB to someone else only transfers the risk to another person.
 	=> END
 
-- Plug it into a computer to see what's inside
-	Player: Maybe I can figure out whose USB this is by checking the files.
-	System: Be careful! This is not a safe choice. Unknown USB drives can contain malicious software that may infect a computer as soon as they are connected.
+- Leave it alone and report it
+	Player: The label is tempting, but I shouldn't trust an unknown USB.
+	System: Best choice! Attackers can use interesting labels to encourage curiosity. USB drives with tempting labels were proved to be opened more often.
 	=> END"
 metadata/dialogue_manager_version = "3.10.4"

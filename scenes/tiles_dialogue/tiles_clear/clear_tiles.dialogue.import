@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cb5pwexjuwrj3"
+path="res://.godot/imported/clear_tiles.dialogue-019a8297f46f61443f7113d9b7b1a7bd.tres"
+
+[deps]
+
+source_file="res://scenes/tiles_dialogue/tiles_clear/clear_tiles.dialogue"
+dest_files=["res://.godot/imported/clear_tiles.dialogue-019a8297f46f61443f7113d9b7b1a7bd.tres"]
+
+[params]
+
+defaults=true

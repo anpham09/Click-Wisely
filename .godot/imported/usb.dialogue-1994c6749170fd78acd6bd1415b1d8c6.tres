@@ -20,14 +20,14 @@ lines = {
 &"character": "Player",
 &"id": "1",
 &"next_id": "3",
-&"text": "This is confidential USB. You see a USB drive on the floor. What do you want to do?",
+&"text": "You find a USB drive labeled \"Confidential\" on the floor. What do you want to do?",
 &"type": "dialogue"
 },
 "10": {
 &"character": "System",
 &"id": "10",
 &"next_id": "11",
-&"text": "Good choice! Not interacting with an unknown USB protects your device. In a workplace, you should also report suspicious devices to IT.",
+&"text": "Better, but not ideal. A suspicious device should be reported instead of kept or passed around.",
 &"type": "dialogue"
 },
 "11": {
@@ -45,21 +45,21 @@ lines = {
 "13": {
 &"id": "13",
 &"next_id": "14",
-&"text": "Plug it into a computer to see what's inside",
+&"text": "Leave it alone and report it to IT or security",
 &"type": "response"
 },
 "14": {
 &"character": "Player",
 &"id": "14",
 &"next_id": "15",
-&"text": "Maybe I can figure out whose USB this is by checking the files.",
+&"text": "If it really is confidential, IT should handle it.",
 &"type": "dialogue"
 },
 "15": {
 &"character": "System",
 &"id": "15",
 &"next_id": "16",
-&"text": "Be careful! This is not a safe choice. Unknown USB drives can contain malicious software that may infect a computer as soon as they are connected.",
+&"text": "Best choice! Labels like \"confidential\" can exploit curiosity and make unknown USB drives seem more legitimate.",
 &"type": "dialogue"
 },
 "16": {
@@ -85,21 +85,21 @@ lines = {
 &"id": "3",
 &"next_id": "4",
 &"responses": PackedStringArray("3", "8", "13"),
-&"text": "Ask whose USB this is",
+&"text": "Open it on a work computer to identify the owner",
 &"type": "response"
 },
 "4": {
 &"character": "Player",
 &"id": "4",
 &"next_id": "5",
-&"text": "Maybe I should ask around before touching it.",
+&"text": "If it's confidential, maybe I can find a name and return it quickly.",
 &"type": "dialogue"
 },
 "5": {
 &"character": "System",
 &"id": "5",
 &"next_id": "6",
-&"text": "Good choice! An unknown USB drive could contain malware. It is safer to report it or give it to IT without plugging it into a computer.",
+&"text": "Risky choice! The label may be designed to make the USB feel important enough to open.",
 &"type": "dialogue"
 },
 "6": {
@@ -117,32 +117,32 @@ lines = {
 "8": {
 &"id": "8",
 &"next_id": "9",
-&"text": "Let's just go",
+&"text": "Take it to my desk and keep it safe until someone asks for it",
 &"type": "response"
 },
 "9": {
 &"character": "Player",
 &"id": "9",
 &"next_id": "10",
-&"text": "I should probably leave it alone.",
+&"text": "I shouldn't open it, but I can hold onto it for now.",
 &"type": "dialogue"
 }
 }
 raw_text = "~ start
-Player: This is confidential USB. You see a USB drive on the floor. What do you want to do?
+Player: You find a USB drive labeled \"Confidential\" on the floor. What do you want to do?
 
-- Ask whose USB this is
-	Player: Maybe I should ask around before touching it.
-	System: Good choice! An unknown USB drive could contain malware. It is safer to report it or give it to IT without plugging it into a computer.
+- Open it on a work computer to identify the owner
+	Player: If it's confidential, maybe I can find a name and return it quickly.
+	System: Risky choice! The label may be designed to make the USB feel important enough to open.
 	=> END
 
-- Let's just go
-	Player: I should probably leave it alone.
-	System: Good choice! Not interacting with an unknown USB protects your device. In a workplace, you should also report suspicious devices to IT.
+- Take it to my desk and keep it safe until someone asks for it
+	Player: I shouldn't open it, but I can hold onto it for now.
+	System: Better, but not ideal. A suspicious device should be reported instead of kept or passed around.
 	=> END
 
-- Plug it into a computer to see what's inside
-	Player: Maybe I can figure out whose USB this is by checking the files.
-	System: Be careful! This is not a safe choice. Unknown USB drives can contain malicious software that may infect a computer as soon as they are connected.
+- Leave it alone and report it to IT or security
+	Player: If it really is confidential, IT should handle it.
+	System: Best choice! Labels like \"confidential\" can exploit curiosity and make unknown USB drives seem more legitimate.
 	=> END"
 metadata/dialogue_manager_version = "3.10.4"

@@ -1,0 +1,148 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" uid="uid://dbs4435dsf3ry" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_u4td6"]
+
+[resource]
+script = ExtResource("1_u4td6")
+using_states = PackedStringArray()
+titles = {
+"start": "1"
+}
+character_names = PackedStringArray("Player", "System")
+first_title = "0"
+lines = {
+"0": {
+&"id": "0",
+&"next_id": "1",
+&"type": "title"
+},
+"1": {
+&"character": "Player",
+&"id": "1",
+&"next_id": "3",
+&"text": "You find a USB drive labeled \"Confidential\" on the floor. What do you want to do?",
+&"type": "dialogue"
+},
+"10": {
+&"character": "System",
+&"id": "10",
+&"next_id": "11",
+&"text": "Better, but not ideal. A suspicious device should be reported instead of kept or passed around.",
+&"type": "dialogue"
+},
+"11": {
+&"id": "11",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"12": {
+&"id": "12",
+&"next_id": "13",
+&"type": ""
+},
+"13": {
+&"id": "13",
+&"next_id": "14",
+&"text": "Leave it alone and report it to IT or security",
+&"type": "response"
+},
+"14": {
+&"character": "Player",
+&"id": "14",
+&"next_id": "15",
+&"text": "If it really is confidential, IT should handle it.",
+&"type": "dialogue"
+},
+"15": {
+&"character": "System",
+&"id": "15",
+&"next_id": "16",
+&"text": "Best choice! Labels like \"confidential\" can exploit curiosity and make unknown USB drives seem more legitimate.",
+&"type": "dialogue"
+},
+"16": {
+&"id": "16",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"17": {
+&"id": "17",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"2": {
+&"id": "2",
+&"next_id": "3",
+&"type": ""
+},
+"3": {
+&"id": "3",
+&"next_id": "4",
+&"responses": PackedStringArray("3", "8", "13"),
+&"text": "Open it on a work computer to identify the owner",
+&"type": "response"
+},
+"4": {
+&"character": "Player",
+&"id": "4",
+&"next_id": "5",
+&"text": "If it's confidential, maybe I can find a name and return it quickly.",
+&"type": "dialogue"
+},
+"5": {
+&"character": "System",
+&"id": "5",
+&"next_id": "6",
+&"text": "Risky choice! The label may be designed to make the USB feel important enough to open.",
+&"type": "dialogue"
+},
+"6": {
+&"id": "6",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"7": {
+&"id": "7",
+&"next_id": "8",
+&"type": ""
+},
+"8": {
+&"id": "8",
+&"next_id": "9",
+&"text": "Take it to my desk and keep it safe until someone asks for it",
+&"type": "response"
+},
+"9": {
+&"character": "Player",
+&"id": "9",
+&"next_id": "10",
+&"text": "I shouldn't open it, but I can hold onto it for now.",
+&"type": "dialogue"
+}
+}
+raw_text = "~ start
+Player: You find a USB drive labeled \"Confidential\" on the floor. What do you want to do?
+
+- Open it on a work computer to identify the owner
+	Player: If it's confidential, maybe I can find a name and return it quickly.
+	System: Risky choice! The label may be designed to make the USB feel important enough to open.
+	=> END
+
+- Take it to my desk and keep it safe until someone asks for it
+	Player: I shouldn't open it, but I can hold onto it for now.
+	System: Better, but not ideal. A suspicious device should be reported instead of kept or passed around.
+	=> END
+
+- Leave it alone and report it to IT or security
+	Player: If it really is confidential, IT should handle it.
+	System: Best choice! Labels like \"confidential\" can exploit curiosity and make unknown USB drives seem more legitimate.
+	=> END"
+metadata/dialogue_manager_version = "3.10.4"

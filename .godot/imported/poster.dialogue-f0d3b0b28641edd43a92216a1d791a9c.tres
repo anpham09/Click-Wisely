@@ -24,67 +24,53 @@ lines = {
 &"type": "dialogue"
 },
 "10": {
-&"character": "Player",
+&"character": "System",
 &"id": "10",
 &"next_id": "11",
-&"text": "I'll check where the QR code is taking me.",
+&"text": "Not enough! The poster itself can be the \"pretext\" that makes the QR code seem trustworthy.",
 &"type": "dialogue"
 },
 "11": {
-&"character": "System",
 &"id": "11",
-&"next_id": "12",
-&"text": "Good choice! Always inspect the destination before opening it.",
-&"type": "dialogue"
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
 },
 "12": {
-&"character": "System",
 &"id": "12",
 &"next_id": "13",
-&"text": "Shortened URLs can still hide suspicious websites.",
-&"type": "dialogue"
+&"type": ""
 },
 "13": {
 &"id": "13",
-&"is_snippet": false,
-&"next_id": "end",
-&"next_id_after": "",
-&"type": "goto"
-},
-"14": {
-&"id": "14",
-&"next_id": "15",
-&"type": ""
-},
-"15": {
-&"id": "15",
-&"next_id": "16",
-&"text": "Verify the fundraiser first",
+&"next_id": "14",
+&"text": "Verify the fundraiser through an official workplace source first",
 &"type": "response"
 },
-"16": {
+"14": {
 &"character": "Player",
-&"id": "16",
-&"next_id": "17",
-&"text": "I should make sure this fundraiser is actually real.",
+&"id": "14",
+&"next_id": "15",
+&"text": "I'll check with the company or organizer before interacting with the QR code.",
 &"type": "dialogue"
 },
-"17": {
+"15": {
 &"character": "System",
-&"id": "17",
-&"next_id": "18",
-&"text": "Great choice! A trustworthy-looking poster does not guarantee a trustworthy QR code.",
+&"id": "15",
+&"next_id": "16",
+&"text": "Best choice! You verified the source instead of trusting the poster or hidden link.",
 &"type": "dialogue"
 },
-"18": {
-&"id": "18",
+"16": {
+&"id": "16",
 &"is_snippet": false,
 &"next_id": "end",
 &"next_id_after": "",
 &"type": "goto"
 },
-"19": {
-&"id": "19",
+"17": {
+&"id": "17",
 &"is_snippet": false,
 &"next_id": "end",
 &"next_id_after": "",
@@ -98,67 +84,65 @@ lines = {
 "3": {
 &"id": "3",
 &"next_id": "4",
-&"responses": PackedStringArray("3", "9", "15"),
-&"text": "Scan the QR code right away",
+&"responses": PackedStringArray("3", "8", "13"),
+&"text": "Scan it and carefully check the URL preview before opening",
 &"type": "response"
 },
 "4": {
 &"character": "Player",
 &"id": "4",
 &"next_id": "5",
-&"text": "It looks trustworthy. I'll scan it.",
+&"text": "My phone will show me the link first, so I can check it there.",
 &"type": "dialogue"
 },
 "5": {
 &"character": "System",
 &"id": "5",
 &"next_id": "6",
-&"text": "Be careful! QR phishing, or \"quishing,\" can hide the real destination behind the code.",
+&"text": "Safer, but not the best choice. Shortened URLs can hide important details, and 92% of users in one study still continued with shortened phishing URLs.",
 &"type": "dialogue"
 },
 "6": {
-&"character": "System",
 &"id": "6",
-&"next_id": "7",
-&"text": "In one study, 85% of users scanned without checking first.",
-&"type": "dialogue"
-},
-"7": {
-&"id": "7",
 &"is_snippet": false,
 &"next_id": "end",
 &"next_id_after": "",
 &"type": "goto"
 },
+"7": {
+&"id": "7",
+&"next_id": "8",
+&"type": ""
+},
 "8": {
 &"id": "8",
 &"next_id": "9",
-&"type": ""
+&"text": "Look over the poster for anything suspicious before scanning",
+&"type": "response"
 },
 "9": {
+&"character": "Player",
 &"id": "9",
 &"next_id": "10",
-&"text": "Check the URL preview first",
-&"type": "response"
+&"text": "The poster looks professional, and nothing seems obviously wrong.",
+&"type": "dialogue"
 }
 }
 raw_text = "~ start
 Player: This poster says I can help families in crisis by scanning the QR code. What should I do?
 
-- Scan the QR code right away
-	Player: It looks trustworthy. I'll scan it.
-	System: Be careful! QR phishing, or \"quishing,\" can hide the real destination behind the code.
-	System: In one study, 85% of users scanned without checking first.
+- Scan it and carefully check the URL preview before opening
+	Player: My phone will show me the link first, so I can check it there.
+	System: Safer, but not the best choice. Shortened URLs can hide important details, and 92% of users in one study still continued with shortened phishing URLs.
 	=> END
 
-- Check the URL preview first
-	Player: I'll check where the QR code is taking me.
-	System: Good choice! Always inspect the destination before opening it.
-	System: Shortened URLs can still hide suspicious websites.
+- Look over the poster for anything suspicious before scanning
+	Player: The poster looks professional, and nothing seems obviously wrong.
+	System: Not enough! The poster itself can be the \"pretext\" that makes the QR code seem trustworthy.
 	=> END
 
-- Verify the fundraiser first
-	Player: I should make sure this fundraiser is actually real.
-	System: Great choice! A trustworthy-looking poster does not guarantee a trustworthy QR code.
+- Verify the fundraiser through an official workplace source first
+	Player: I'll check with the company or organizer before interacting with the QR code.
+	System: Best choice! You verified the source instead of trusting the poster or hidden link.
 	=> END"
 metadata/dialogue_manager_version = "3.10.4"

@@ -1,19 +1,17 @@
 ~ start
 Player: This poster says I can help families in crisis by scanning the QR code. What should I do?
 
-- Scan the QR code right away
-	Player: It looks trustworthy. I'll scan it.
-	System: Be careful! QR phishing, or "quishing," can hide the real destination behind the code.
-	System: In one study, 85% of users scanned without checking first.
+- Scan it and carefully check the URL preview before opening
+	Player: My phone will show me the link first, so I can check it there.
+	System: Safer, but not the best choice. Shortened URLs can hide important details, and 92% of users in one study still continued with shortened phishing URLs.
 	=> END
 
-- Check the URL preview first
-	Player: I'll check where the QR code is taking me.
-	System: Good choice! Always inspect the destination before opening it.
-	System: Shortened URLs can still hide suspicious websites.
+- Look over the poster for anything suspicious before scanning
+	Player: The poster looks professional, and nothing seems obviously wrong.
+	System: Not enough! The poster itself can be the "pretext" that makes the QR code seem trustworthy.
 	=> END
 
-- Verify the fundraiser first
-	Player: I should make sure this fundraiser is actually real.
-	System: Great choice! A trustworthy-looking poster does not guarantee a trustworthy QR code.
+- Verify the fundraiser through an official workplace source first
+	Player: I'll check with the company or organizer before interacting with the QR code.
+	System: Best choice! You verified the source instead of trusting the poster or hidden link.
 	=> END

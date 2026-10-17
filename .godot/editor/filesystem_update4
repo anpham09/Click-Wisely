@@ -22,3 +22,6 @@ res://scenes/Risk Items/usb_confidential.tscn
 res://scenes/Risk Items/usb_exam.tscn
 res://script/confidential_usb_area.gd
 res://script/exam_usb_area.gd
+res://scenes/tiles_clear/balloon.gd
+res://scenes/tiles_clear/balloon.tscn
+res://scenes/tiles_dialogue/tiles_clear/balloon.tscn

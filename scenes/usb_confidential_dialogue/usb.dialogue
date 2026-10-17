@@ -1,17 +1,17 @@
 ~ start
-Player: This is confidential USB. You see a USB drive on the floor. What do you want to do?
+Player: You find a USB drive labeled "Confidential" on the floor. What do you want to do?
 
-- Ask whose USB this is
-	Player: Maybe I should ask around before touching it.
-	System: Good choice! An unknown USB drive could contain malware. It is safer to report it or give it to IT without plugging it into a computer.
+- Open it on a work computer to identify the owner
+	Player: If it's confidential, maybe I can find a name and return it quickly.
+	System: Risky choice! The label may be designed to make the USB feel important enough to open.
 	=> END
 
-- Let's just go
-	Player: I should probably leave it alone.
-	System: Good choice! Not interacting with an unknown USB protects your device. In a workplace, you should also report suspicious devices to IT.
+- Take it to my desk and keep it safe until someone asks for it
+	Player: I shouldn't open it, but I can hold onto it for now.
+	System: Better, but not ideal. A suspicious device should be reported instead of kept or passed around.
 	=> END
 
-- Plug it into a computer to see what's inside
-	Player: Maybe I can figure out whose USB this is by checking the files.
-	System: Be careful! This is not a safe choice. Unknown USB drives can contain malicious software that may infect a computer as soon as they are connected.
+- Leave it alone and report it to IT or security
+	Player: If it really is confidential, IT should handle it.
+	System: Best choice! Labels like "confidential" can exploit curiosity and make unknown USB drives seem more legitimate.
 	=> END
