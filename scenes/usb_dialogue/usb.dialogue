@@ -4,14 +4,18 @@ Player: You see a USB drive on the floor. What do you want to do?
 - Pick it up and ask nearby coworkers whose it is
 	Player: Maybe I can return it to whoever dropped it.
 	System: Reasonable, but not the safest choice. It is better to report an unknown USB to IT instead of handling the situation yourself.
+	$> add_item()
 	=> END
 
 - Plug it into an offline computer to check the files safely
 	Player: If the computer is offline, I should be able to check it without much risk.
 	System: Be careful! Using an offline computer does not guarantee the USB is safe. Similar protective strategies were still ineffective in research.
+	$> add_item()
 	=> END
 
 - Leave it alone and report it to IT
 	Player: I'll let IT handle it instead of trying to investigate it myself.
 	System: Best choice! Unknown USB drives should be handled by the people responsible for workplace security.
+	$> add_item()
+	$> add_score()
 	=> END

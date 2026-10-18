@@ -4,14 +4,18 @@ Player: You find a USB drive labeled "Confidential" on the floor. What do you wa
 - Open it on a work computer to identify the owner
 	Player: If it's confidential, maybe I can find a name and return it quickly.
 	System: Risky choice! The label may be designed to make the USB feel important enough to open.
+	$> add_item()
 	=> END
 
 - Take it to my desk and keep it safe until someone asks for it
 	Player: I shouldn't open it, but I can hold onto it for now.
 	System: Better, but not ideal. A suspicious device should be reported instead of kept or passed around.
+	$> add_item()
 	=> END
 
 - Leave it alone and report it to IT or security
 	Player: If it really is confidential, IT should handle it.
 	System: Best choice! Labels like "confidential" can exploit curiosity and make unknown USB drives seem more legitimate.
+	$> add_item()
+	$> add_score()
 	=> END

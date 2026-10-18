@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://cbi3d56ni7pio"]
+
+[ext_resource type="Script" uid="uid://mn4u6qndlrb" path="res://script/home_screen.gd" id="1_er2qq"]
+[ext_resource type="Texture2D" uid="uid://dnv1x7uu7m0ms" path="res://models/assets/won_endgame.jpeg" id="2_vgnhj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tjifo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bie51"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ih2x6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ked1l"]
+
+[node name="Home Screen" type="Node2D"]
+script = ExtResource("1_er2qq")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1154.0847
+offset_bottom = 659.0
+texture = ExtResource("2_vgnhj")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="."]
+offset_left = 177.0
+offset_top = 321.0
+offset_right = 978.0
+offset_bottom = 515.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_tjifo")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_bie51")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ih2x6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ked1l")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,17 +1,22 @@
 ~ start
+
 Player: You find a USB drive labeled "Final Exam Key" on the floor. What do you want to do?
 
 - Plug it into my personal laptop instead of a school computer
 	Player: If I use my own laptop, at least I won't put the school computers at risk.
 	System: Still risky! A personal device can be infected too. The label may be there specifically to make you curious enough to plug it in.
+	$> add_item()
 	=> END
 
 - Ask a friend if they want to check what's inside
 	Player: Maybe someone else can see if it's actually an exam key.
 	System: Not a safe solution! Passing the USB to someone else only transfers the risk to another person.
+	$> add_item()
 	=> END
 
 - Leave it alone and report it
 	Player: The label is tempting, but I shouldn't trust an unknown USB.
 	System: Best choice! Attackers can use interesting labels to encourage curiosity. USB drives with tempting labels were proved to be opened more often.
+	$> add_item()
+	$> add_score()
 	=> END

@@ -11,10 +11,9 @@ func _on_body_entered(body: Node3D) -> void:
 	if body.name == "ProtoController":
 		var balloon = usb_balloon_scene.instantiate()
 		get_tree().current_scene.add_child(balloon)
-		balloon.start(dialogue_resource, "start")
+		balloon.start(dialogue_resource, "start", [body])
+		#balloon.start(dialogue_resource, "start")
 		
-		proto_controller.add_item()
 		usb.queue_free()
 		
-		proto_controller.check_items()
 		

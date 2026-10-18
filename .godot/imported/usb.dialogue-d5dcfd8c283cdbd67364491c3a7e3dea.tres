@@ -24,67 +24,125 @@ lines = {
 &"type": "dialogue"
 },
 "10": {
-&"character": "System",
+&"character": "Player",
 &"id": "10",
 &"next_id": "11",
-&"text": "Be careful! Using an offline computer does not guarantee the USB is safe. Similar protective strategies were still ineffective in research.",
+&"text": "If the computer is offline, I should be able to check it without much risk.",
 &"type": "dialogue"
 },
 "11": {
+&"character": "System",
 &"id": "11",
-&"is_snippet": false,
-&"next_id": "end",
-&"next_id_after": "",
-&"type": "goto"
+&"next_id": "12",
+&"text": "Be careful! Using an offline computer does not guarantee the USB is safe. Similar protective strategies were still ineffective in research.",
+&"type": "dialogue"
 },
 "12": {
 &"id": "12",
+&"mutation": {
+&"expression": Array[Dictionary]([{
+&"function": "add_item",
+&"i": 3,
+&"type": &"function",
+&"value": Array[Array]([Array[Dictionary]([{
+&"i": 12,
+&"type": &"parens_close"
+}])])
+}]),
+&"is_blocking": true
+},
 &"next_id": "13",
-&"type": ""
+&"type": "mutation"
 },
 "13": {
 &"id": "13",
-&"next_id": "14",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"14": {
+&"id": "14",
+&"next_id": "15",
+&"type": ""
+},
+"15": {
+&"id": "15",
+&"next_id": "16",
 &"text": "Leave it alone and report it to IT",
 &"type": "response"
 },
-"14": {
+"16": {
 &"character": "Player",
-&"id": "14",
-&"next_id": "15",
+&"id": "16",
+&"next_id": "17",
 &"text": "I'll let IT handle it instead of trying to investigate it myself.",
 &"type": "dialogue"
 },
-"15": {
+"17": {
 &"character": "System",
-&"id": "15",
-&"next_id": "16",
+&"id": "17",
+&"next_id": "18",
 &"text": "Best choice! Unknown USB drives should be handled by the people responsible for workplace security.",
 &"type": "dialogue"
 },
-"16": {
-&"id": "16",
-&"is_snippet": false,
-&"next_id": "end",
-&"next_id_after": "",
-&"type": "goto"
+"18": {
+&"id": "18",
+&"mutation": {
+&"expression": Array[Dictionary]([{
+&"function": "add_item",
+&"i": 3,
+&"type": &"function",
+&"value": Array[Array]([Array[Dictionary]([{
+&"i": 12,
+&"type": &"parens_close"
+}])])
+}]),
+&"is_blocking": true
 },
-"17": {
-&"id": "17",
-&"is_snippet": false,
-&"next_id": "end",
-&"next_id_after": "",
-&"type": "goto"
+&"next_id": "19",
+&"type": "mutation"
+},
+"19": {
+&"id": "19",
+&"mutation": {
+&"expression": Array[Dictionary]([{
+&"function": "add_score",
+&"i": 3,
+&"type": &"function",
+&"value": Array[Array]([Array[Dictionary]([{
+&"i": 13,
+&"type": &"parens_close"
+}])])
+}]),
+&"is_blocking": true
+},
+&"next_id": "20",
+&"type": "mutation"
 },
 "2": {
 &"id": "2",
 &"next_id": "3",
 &"type": ""
 },
+"20": {
+&"id": "20",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"21": {
+&"id": "21",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
 "3": {
 &"id": "3",
 &"next_id": "4",
-&"responses": PackedStringArray("3", "8", "13"),
+&"responses": PackedStringArray("3", "9", "15"),
 &"text": "Pick it up and ask nearby coworkers whose it is",
 &"type": "response"
 },
@@ -104,28 +162,38 @@ lines = {
 },
 "6": {
 &"id": "6",
+&"mutation": {
+&"expression": Array[Dictionary]([{
+&"function": "add_item",
+&"i": 3,
+&"type": &"function",
+&"value": Array[Array]([Array[Dictionary]([{
+&"i": 12,
+&"type": &"parens_close"
+}])])
+}]),
+&"is_blocking": true
+},
+&"next_id": "7",
+&"type": "mutation"
+},
+"7": {
+&"id": "7",
 &"is_snippet": false,
 &"next_id": "end",
 &"next_id_after": "",
 &"type": "goto"
 },
-"7": {
-&"id": "7",
-&"next_id": "8",
-&"type": ""
-},
 "8": {
 &"id": "8",
 &"next_id": "9",
-&"text": "Plug it into an offline computer to check the files safely",
-&"type": "response"
+&"type": ""
 },
 "9": {
-&"character": "Player",
 &"id": "9",
 &"next_id": "10",
-&"text": "If the computer is offline, I should be able to check it without much risk.",
-&"type": "dialogue"
+&"text": "Plug it into an offline computer to check the files safely",
+&"type": "response"
 }
 }
 raw_text = "~ start
@@ -134,15 +202,19 @@ Player: You see a USB drive on the floor. What do you want to do?
 - Pick it up and ask nearby coworkers whose it is
 	Player: Maybe I can return it to whoever dropped it.
 	System: Reasonable, but not the safest choice. It is better to report an unknown USB to IT instead of handling the situation yourself.
+	$> add_item()
 	=> END
 
 - Plug it into an offline computer to check the files safely
 	Player: If the computer is offline, I should be able to check it without much risk.
 	System: Be careful! Using an offline computer does not guarantee the USB is safe. Similar protective strategies were still ineffective in research.
+	$> add_item()
 	=> END
 
 - Leave it alone and report it to IT
 	Player: I'll let IT handle it instead of trying to investigate it myself.
 	System: Best choice! Unknown USB drives should be handled by the people responsible for workplace security.
+	$> add_item()
+	$> add_score()
 	=> END"
 metadata/dialogue_manager_version = "3.10.4"

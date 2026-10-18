@@ -6,143 +6,221 @@
 script = ExtResource("1_ma825")
 using_states = PackedStringArray()
 titles = {
-"start": "1"
+"start": "2"
 }
 character_names = PackedStringArray("Player", "System")
 first_title = "0"
 lines = {
 "0": {
 &"id": "0",
-&"next_id": "1",
+&"next_id": "2",
 &"type": "title"
 },
 "1": {
-&"character": "Player",
 &"id": "1",
-&"next_id": "3",
-&"text": "You find a USB drive labeled \"Final Exam Key\" on the floor. What do you want to do?",
-&"type": "dialogue"
+&"next_id": "2",
+&"type": ""
 },
 "10": {
-&"character": "System",
 &"id": "10",
 &"next_id": "11",
+&"text": "Ask a friend if they want to check what's inside",
+&"type": "response"
+},
+"11": {
+&"character": "Player",
+&"id": "11",
+&"next_id": "12",
+&"text": "Maybe someone else can see if it's actually an exam key.",
+&"type": "dialogue"
+},
+"12": {
+&"character": "System",
+&"id": "12",
+&"next_id": "13",
 &"text": "Not a safe solution! Passing the USB to someone else only transfers the risk to another person.",
 &"type": "dialogue"
 },
-"11": {
-&"id": "11",
+"13": {
+&"id": "13",
+&"mutation": {
+&"expression": Array[Dictionary]([{
+&"function": "add_item",
+&"i": 3,
+&"type": &"function",
+&"value": Array[Array]([Array[Dictionary]([{
+&"i": 12,
+&"type": &"parens_close"
+}])])
+}]),
+&"is_blocking": true
+},
+&"next_id": "14",
+&"type": "mutation"
+},
+"14": {
+&"id": "14",
 &"is_snippet": false,
 &"next_id": "end",
 &"next_id_after": "",
 &"type": "goto"
 },
-"12": {
-&"id": "12",
-&"next_id": "13",
-&"type": ""
-},
-"13": {
-&"id": "13",
-&"next_id": "14",
-&"text": "Leave it alone and report it",
-&"type": "response"
-},
-"14": {
-&"character": "Player",
-&"id": "14",
-&"next_id": "15",
-&"text": "The label is tempting, but I shouldn't trust an unknown USB.",
-&"type": "dialogue"
-},
 "15": {
-&"character": "System",
 &"id": "15",
 &"next_id": "16",
-&"text": "Best choice! Attackers can use interesting labels to encourage curiosity. USB drives with tempting labels were proved to be opened more often.",
-&"type": "dialogue"
+&"type": ""
 },
 "16": {
 &"id": "16",
-&"is_snippet": false,
-&"next_id": "end",
-&"next_id_after": "",
-&"type": "goto"
+&"next_id": "17",
+&"text": "Leave it alone and report it",
+&"type": "response"
 },
 "17": {
+&"character": "Player",
 &"id": "17",
+&"next_id": "18",
+&"text": "The label is tempting, but I shouldn't trust an unknown USB.",
+&"type": "dialogue"
+},
+"18": {
+&"character": "System",
+&"id": "18",
+&"next_id": "19",
+&"text": "Best choice! Attackers can use interesting labels to encourage curiosity. USB drives with tempting labels were proved to be opened more often.",
+&"type": "dialogue"
+},
+"19": {
+&"id": "19",
+&"mutation": {
+&"expression": Array[Dictionary]([{
+&"function": "add_item",
+&"i": 3,
+&"type": &"function",
+&"value": Array[Array]([Array[Dictionary]([{
+&"i": 12,
+&"type": &"parens_close"
+}])])
+}]),
+&"is_blocking": true
+},
+&"next_id": "20",
+&"type": "mutation"
+},
+"2": {
+&"character": "Player",
+&"id": "2",
+&"next_id": "4",
+&"text": "You find a USB drive labeled \"Final Exam Key\" on the floor. What do you want to do?",
+&"type": "dialogue"
+},
+"20": {
+&"id": "20",
+&"mutation": {
+&"expression": Array[Dictionary]([{
+&"function": "add_score",
+&"i": 3,
+&"type": &"function",
+&"value": Array[Array]([Array[Dictionary]([{
+&"i": 13,
+&"type": &"parens_close"
+}])])
+}]),
+&"is_blocking": true
+},
+&"next_id": "21",
+&"type": "mutation"
+},
+"21": {
+&"id": "21",
 &"is_snippet": false,
 &"next_id": "end",
 &"next_id_after": "",
 &"type": "goto"
 },
-"2": {
-&"id": "2",
-&"next_id": "3",
-&"type": ""
+"22": {
+&"id": "22",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
 },
 "3": {
 &"id": "3",
 &"next_id": "4",
-&"responses": PackedStringArray("3", "8", "13"),
+&"type": ""
+},
+"4": {
+&"id": "4",
+&"next_id": "5",
+&"responses": PackedStringArray("4", "10", "16"),
 &"text": "Plug it into my personal laptop instead of a school computer",
 &"type": "response"
 },
-"4": {
+"5": {
 &"character": "Player",
-&"id": "4",
-&"next_id": "5",
+&"id": "5",
+&"next_id": "6",
 &"text": "If I use my own laptop, at least I won't put the school computers at risk.",
 &"type": "dialogue"
 },
-"5": {
+"6": {
 &"character": "System",
-&"id": "5",
-&"next_id": "6",
+&"id": "6",
+&"next_id": "7",
 &"text": "Still risky! A personal device can be infected too. The label may be there specifically to make you curious enough to plug it in.",
 &"type": "dialogue"
 },
-"6": {
-&"id": "6",
+"7": {
+&"id": "7",
+&"mutation": {
+&"expression": Array[Dictionary]([{
+&"function": "add_item",
+&"i": 3,
+&"type": &"function",
+&"value": Array[Array]([Array[Dictionary]([{
+&"i": 12,
+&"type": &"parens_close"
+}])])
+}]),
+&"is_blocking": true
+},
+&"next_id": "8",
+&"type": "mutation"
+},
+"8": {
+&"id": "8",
 &"is_snippet": false,
 &"next_id": "end",
 &"next_id_after": "",
 &"type": "goto"
 },
-"7": {
-&"id": "7",
-&"next_id": "8",
-&"type": ""
-},
-"8": {
-&"id": "8",
-&"next_id": "9",
-&"text": "Ask a friend if they want to check what's inside",
-&"type": "response"
-},
 "9": {
-&"character": "Player",
 &"id": "9",
 &"next_id": "10",
-&"text": "Maybe someone else can see if it's actually an exam key.",
-&"type": "dialogue"
+&"type": ""
 }
 }
 raw_text = "~ start
+
 Player: You find a USB drive labeled \"Final Exam Key\" on the floor. What do you want to do?
 
 - Plug it into my personal laptop instead of a school computer
 	Player: If I use my own laptop, at least I won't put the school computers at risk.
 	System: Still risky! A personal device can be infected too. The label may be there specifically to make you curious enough to plug it in.
+	$> add_item()
 	=> END
 
 - Ask a friend if they want to check what's inside
 	Player: Maybe someone else can see if it's actually an exam key.
 	System: Not a safe solution! Passing the USB to someone else only transfers the risk to another person.
+	$> add_item()
 	=> END
 
 - Leave it alone and report it
 	Player: The label is tempting, but I shouldn't trust an unknown USB.
 	System: Best choice! Attackers can use interesting labels to encourage curiosity. USB drives with tempting labels were proved to be opened more often.
+	$> add_item()
+	$> add_score()
 	=> END"
 metadata/dialogue_manager_version = "3.10.4"

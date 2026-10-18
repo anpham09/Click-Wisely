@@ -4,14 +4,18 @@ Player: This poster says I can help families in crisis by scanning the QR code. 
 - Scan it and carefully check the URL preview before opening
 	Player: My phone will show me the link first, so I can check it there.
 	System: Safer, but not the best choice. Shortened URLs can hide important details, and 92% of users in one study still continued with shortened phishing URLs.
+	$> add_item()
 	=> END
 
 - Look over the poster for anything suspicious before scanning
 	Player: The poster looks professional, and nothing seems obviously wrong.
 	System: Not enough! The poster itself can be the "pretext" that makes the QR code seem trustworthy.
+	$> add_item()
 	=> END
 
 - Verify the fundraiser through an official workplace source first
 	Player: I'll check with the company or organizer before interacting with the QR code.
 	System: Best choice! You verified the source instead of trusting the poster or hidden link.
+	$> add_item()
+	$> add_score()
 	=> END

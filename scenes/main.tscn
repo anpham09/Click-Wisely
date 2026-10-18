@@ -1,7 +1,8 @@
-[gd_scene load_steps=24 format=3 uid="uid://bnpmrjo4jn6mi"]
+[gd_scene load_steps=27 format=3 uid="uid://bnpmrjo4jn6mi"]
 
 [ext_resource type="Script" uid="uid://b1bbplq6csmt5" path="res://script/main.gd" id="1_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://cyxkguyqwxbly" path="res://script/failed_area.gd" id="3_a8y0u"]
 [ext_resource type="PackedScene" uid="uid://bg5exoleaiamy" path="res://scenes/Risk Items/usb.tscn" id="5_lquwl"]
 [ext_resource type="Script" uid="uid://cg6u5t0ujxr63" path="res://script/usb_area.gd" id="5_tefeu"]
 [ext_resource type="Script" uid="uid://d2ejye5xbxo04" path="res://script/confidential_usb_area.gd" id="5_ya4ey"]
@@ -12,6 +13,7 @@
 [ext_resource type="Script" uid="uid://0dmp66q8o51w" path="res://script/poster_email_area.gd" id="9_85g3d"]
 [ext_resource type="PackedScene" uid="uid://bpnrv560rqgs7" path="res://scenes/office.tscn" id="10_choun"]
 [ext_resource type="PackedScene" uid="uid://c5h0kiedxsiye" path="res://scenes/plant.tscn" id="10_ya4ey"]
+[ext_resource type="Script" uid="uid://cneat5301eh4i" path="res://scenes/level_changer.gd" id="13_trceg"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7dm0k"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -27,6 +29,9 @@ ambient_light_color = Color(1, 1, 1, 1)
 ambient_light_energy = 0.79
 tonemap_mode = 2
 glow_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a8y0u"]
+size = Vector3(3.8691483, 3.0848389, 3.9387589)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o6xl0"]
 albedo_color = Color(0.54509807, 0.6117647, 0.73333335, 1)
@@ -50,8 +55,6 @@ material = SubResource("StandardMaterial3D_choun")
 albedo_color = Color(0.78039217, 0.63529414, 0.49803922, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eb6dy"]
-albedo_color = Color(0.05490196, 0.10980392, 0.21176471, 1)
-metallic = 0.89
 
 [sub_resource type="BoxMesh" id="BoxMesh_trceg"]
 material = SubResource("StandardMaterial3D_eb6dy")
@@ -95,35 +98,137 @@ transform = Transform3D(7.25, 0, 0, 0, 1, 0, 0, 0, 1, 24.650003, -0.6, -29.7)
 use_collision = true
 size = Vector3(9.6, 0.2, 67)
 
-[node name="Correct Hole" type="CSGBox3D" parent="Floor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9341593, -0.48093593, 6.890747)
+[node name="Hole Border" type="CSGBox3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.96849155, 0.03871739, 7.016876)
+visible = false
+size = Vector3(0.77008057, 2.0393066, 3.6478882)
+
+[node name="Correct Hole Bottom" type="CSGBox3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9341593, 1.6368314, 6.890747)
+visible = false
 operation = 2
-size = Vector3(0.38555908, 2.9086914, 2.7814941)
+size = Vector3(0.38555908, 7.144226, 2.7814941)
+
+[node name="Area3D" type="Area3D" parent="Floor/Correct Hole Bottom"]
+transform = Transform3D(0.13793103, 0, 0, 0, 1, 0, 0, 0, 1, -0.45612574, -1.0368314, -0.83268356)
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("13_trceg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/Correct Hole Bottom/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.492, -5, 0.877)
+shape = SubResource("BoxShape3D_a8y0u")
+
+[node name="Hole Border1" type="CSGBox3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.039149, 0.03871739, 17.921383)
+visible = false
+size = Vector3(0.7267151, 2.0393066, 3.1198425)
 
 [node name="InCorrect Hole #1" type="CSGBox3D" parent="Floor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.057688, -0.48093593, 17.947208)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.057688, 0.7110807, 17.947208)
+visible = false
 operation = 2
-size = Vector3(0.38555908, 2.9086914, 2.7814941)
+size = Vector3(0.38555908, 5.2927246, 2.7814941)
+
+[node name="Area3D2" type="Area3D" parent="Floor/InCorrect Hole #1"]
+transform = Transform3D(0.13793103, 0, 0, 0, 1, 0, 0, 0, 1, -0.23422796, 1.3197994, -3.1711073)
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("3_a8y0u")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/InCorrect Hole #1/Area3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.408, -5, 3.281)
+shape = SubResource("BoxShape3D_a8y0u")
+
+[node name="Hole Border2" type="CSGBox3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1579142, 0.03871739, -17.860695)
+visible = false
+size = Vector3(0.7267151, 2.0393066, 3.6087494)
 
 [node name="InCorrect Hole #2" type="CSGBox3D" parent="Floor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1557305, -0.48093593, -18.042912)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.210011, 0.7309934, -17.943684)
+visible = false
 operation = 2
-size = Vector3(0.38555908, 2.9086914, 2.7814941)
+size = Vector3(0.38555908, 7.9168396, 2.7814941)
+
+[node name="Area3D3" type="Area3D" parent="Floor/InCorrect Hole #2"]
+transform = Transform3D(0.13793103, 0, 0, 0, 1, 0, 0, 0, 1, -0.22679323, 1.2998867, -1.0974045)
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("3_a8y0u")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/InCorrect Hole #2/Area3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.804, -5, 0.984)
+shape = SubResource("BoxShape3D_a8y0u")
+
+[node name="Hole Border3" type="CSGBox3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.183488, 0.03871739, -24.480122)
+visible = false
+size = Vector3(0.48740387, 2.0393066, 4.1371117)
 
 [node name="InCorrect Hole #3" type="CSGBox3D" parent="Floor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.176941, -0.48093593, -24.487762)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.176941, 0.66731846, -24.487762)
+visible = false
 operation = 2
-size = Vector3(0.38555908, 2.9086914, 2.7814941)
+size = Vector3(0.38555908, 5.2052, 2.7814941)
+
+[node name="Area3D4" type="Area3D" parent="Floor/InCorrect Hole #3"]
+transform = Transform3D(0.13793103, 0, 0, 0, 1, 0, 0, 0, 1, -0.07001531, 1.3635616, -1.3137398)
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("3_a8y0u")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/InCorrect Hole #3/Area3D4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.69, -5, 0.984)
+shape = SubResource("BoxShape3D_a8y0u")
+
+[node name="Hole Border4" type="CSGBox3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.21126866, 0.03871739, -3.3868904)
+visible = false
+size = Vector3(0.48740387, 2.0393066, 4.1371117)
 
 [node name="InCorrect Hole #4" type="CSGBox3D" parent="Floor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.22207117, -0.48093593, -3.6650543)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.22207117, 0.9422208, -3.6650543)
+visible = false
 operation = 2
-size = Vector3(0.38555908, 2.9086914, 2.7814941)
+size = Vector3(0.38555908, 5.755005, 2.7814941)
+
+[node name="Area3D5" type="Area3D" parent="Floor/InCorrect Hole #4"]
+transform = Transform3D(0.13793103, 0, 0, 0, 1, 0, 0, 0, 1, 0.115427494, 1.0886593, -1.9812241)
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("3_a8y0u")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/InCorrect Hole #4/Area3D5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.944, -5, 1.899)
+shape = SubResource("BoxShape3D_a8y0u")
+
+[node name="Hole Border5" type="CSGBox3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1733446, 0.03871739, -27.676197)
+visible = false
+size = Vector3(0.48740387, 2.0393066, 4.1371117)
 
 [node name="InCorrect Hole #5" type="CSGBox3D" parent="Floor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1875885, -0.48093593, -27.665054)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1875885, 1.1419278, -27.665054)
+visible = false
 operation = 2
-size = Vector3(0.38555908, 2.9086914, 2.7814941)
+size = Vector3(0.38555908, 6.154419, 2.7814941)
+
+[node name="Area3D6" type="Area3D" parent="Floor/InCorrect Hole #5"]
+transform = Transform3D(0.13793103, 0, 0, 0, 1, 0, 0, 0, 1, -1.0863035, 0.88895226, 10.142628)
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("3_a8y0u")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/InCorrect Hole #5/Area3D6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.449, -5, -0.779)
+shape = SubResource("BoxShape3D_a8y0u")
+
+[node name="Floor3" type="CSGBox3D" parent="."]
+transform = Transform3D(7.25, 0, 0, 0, 1, 0, 0, 0, 1, 24.650003, -8.358221, -29.7)
+visible = false
+use_collision = true
+size = Vector3(9.6, 0.2, 67)
 
 [node name="Floor2" type="CSGBox3D" parent="."]
 transform = Transform3D(7.25, 0, 0, 0, 1, 0, 0, 0, 1, 24.650003, 7.259325, -29.7)
@@ -560,7 +665,6 @@ transform = Transform3D(-8.211, 0, -6.644129e-08, 0, 8.007998, 0, 7.1782836e-07,
 size = Vector3(0.2, 7.1628175, 1.7)
 
 [node name="wall high" type="CSGCombiner3D" parent="Walls&Doors"]
-visible = false
 
 [node name="Wall High #4" type="CSGBox3D" parent="Walls&Doors/wall high"]
 transform = Transform3D(1.5, 0, 0, 0, 1, 0, 0, 0, 0.99, 8.2230015, 31.821836, -2.0800002)
@@ -603,7 +707,7 @@ transform = Transform3D(0.91200006, 0, 0, 0, 0.94499993, 0, 0, 0, 0.9163, 9.63, 
 transform = Transform3D(0.91200006, 0, 0, 0, 0.94499993, 0, 0, 0, 0.9163, 12.29, 1.1871428, -31.322573)
 
 [node name="ProtoController" parent="." instance=ExtResource("1_ig7tw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19999999, -0.6, 0.6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19999999, 2.4067826, 1.3079271)
 collision_layer = 2
 can_sprint = true
 can_freefly = true
@@ -611,11 +715,19 @@ can_freefly = true
 [node name="Camera3D" type="Camera3D" parent="ProtoController"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19999999, 0.6, -0.6)
 
-[node name="Label" type="Label" parent="ProtoController"]
+[node name="Score Label" type="Label" parent="ProtoController"]
 offset_left = 42.0
-offset_top = 28.0
-offset_right = 195.0
-offset_bottom = 73.0
+offset_top = 64.0
+offset_right = 209.0
+offset_bottom = 109.0
+theme_override_font_sizes/font_size = 32
+text = "Scores: 0/5"
+
+[node name="Items Label" type="Label" parent="ProtoController"]
+offset_left = 58.0
+offset_top = 18.0
+offset_right = 211.0
+offset_bottom = 63.0
 theme_override_font_sizes/font_size = 32
 text = "Items: 0/5"
 
@@ -628,7 +740,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.7, 0.2, -9.3)
 [node name="USBs" type="CSGCombiner3D" parent="Items"]
 
 [node name="Regular USB" parent="Items/USBs" instance=ExtResource("5_lquwl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6488657, -3.6000001, -7.390235)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6488657, -3.6000001, -4.29488)
 
 [node name="Area3D" type="Area3D" parent="Items/USBs/Regular USB"]
 transform = Transform3D(1, 0, 0, 0, 1.0251968, 0, 0, 0, 1.3242002, 0, 0.27708387, 0.9217119)
@@ -1096,6 +1208,13 @@ mesh = SubResource("BoxMesh_trceg")
 transform = Transform3D(0.11482352, 0, 0, 0, -2.2454927e-07, -0.13065165, 0, 5.1370883, -5.710965e-09, 28.448463, 3.9596162, -41.42594)
 mesh = SubResource("BoxMesh_trceg")
 
+[connection signal="tree_entered" from="Floor/Correct Hole Bottom" to="." method="_on_correct_hole_bottom_tree_entered"]
+[connection signal="body_entered" from="Floor/Correct Hole Bottom/Area3D" to="Floor/Correct Hole Bottom/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Floor/InCorrect Hole #1/Area3D2" to="Floor/InCorrect Hole #1/Area3D2" method="_on_body_entered"]
+[connection signal="body_entered" from="Floor/InCorrect Hole #2/Area3D3" to="Floor/InCorrect Hole #2/Area3D3" method="_on_body_entered"]
+[connection signal="body_entered" from="Floor/InCorrect Hole #3/Area3D4" to="Floor/InCorrect Hole #3/Area3D4" method="_on_body_entered"]
+[connection signal="body_entered" from="Floor/InCorrect Hole #4/Area3D5" to="Floor/InCorrect Hole #4/Area3D5" method="_on_body_entered"]
+[connection signal="body_entered" from="Floor/InCorrect Hole #5/Area3D6" to="Floor/InCorrect Hole #5/Area3D6" method="_on_body_entered"]
 [connection signal="body_entered" from="Items/USBs/Regular USB/Area3D" to="Items/USBs/Regular USB/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Items/USBs/Confidential USB/Area3D" to="Items/USBs/Confidential USB/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Items/USBs/Exam USB/Area3D" to="Items/USBs/Exam USB/Area3D" method="_on_body_entered"]

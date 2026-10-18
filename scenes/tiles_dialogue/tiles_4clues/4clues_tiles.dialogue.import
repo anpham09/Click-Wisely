@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dinnj2yfi7lht"
+path="res://.godot/imported/4clues_tiles.dialogue-4560644cb80dfc89ed95fdd9420b005c.tres"
+
+[deps]
+
+source_file="res://scenes/tiles_dialogue/tiles_4clues/4clues_tiles.dialogue"
+dest_files=["res://.godot/imported/4clues_tiles.dialogue-4560644cb80dfc89ed95fdd9420b005c.tres"]
+
+[params]
+
+defaults=true

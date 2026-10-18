@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bs72ogkvdd7d6"]
+[gd_scene load_steps=6 format=3 uid="uid://bs72ogkvdd7d6"]
 
 [ext_resource type="Script" uid="uid://dq6n2srjcx340" path="res://addons/proto_controller/proto_controller.gd" id="1_ucva2"]
 
@@ -13,7 +13,10 @@ height = 1.8
 radius = 0.4
 height = 1.8
 
-[node name="ProtoController" type="CharacterBody3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_g2uji"]
+size = Vector3(0.5, 0.5, 0.5)
+
+[node name="ProtoController" type="CharacterBody3D" groups=["player"]]
 script = ExtResource("1_ucva2")
 input_left = "move_left"
 input_right = "move_right"
@@ -36,3 +39,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Head"]
 transform = Transform3D(1, 0, 0, 0, 0.9848077, 0.17364818, 0, -0.17364818, 0.9848077, 0, 1.6000001, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.282652, 0)
+shape = SubResource("BoxShape3D_g2uji")
