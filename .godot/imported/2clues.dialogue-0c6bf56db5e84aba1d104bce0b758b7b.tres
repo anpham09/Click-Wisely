@@ -72,7 +72,7 @@ lines = {
 &"character": "System",
 &"id": "7",
 &"next_id": "9",
-&"text": "Cyber Clue 2: Look on the right side opposite the office door on the left.",
+&"text": "Cyber Clue 2: Look on the right side which is opposite the office door on the left.",
 &"type": "dialogue"
 },
 "8": {
@@ -95,7 +95,7 @@ System: Several openings have appeared, but only one will lead you safely out. T
 System: You got 2 decisions correct so here are your 2 Cyber Clues.
 System: Cyber Clue 1: The safe exit is in the front half of the office.
 
-System: Cyber Clue 2: Look on the right side opposite the office door on the left.
+System: Cyber Clue 2: Look on the right side which is opposite the office door on the left.
 
 => END
 "

@@ -45,10 +45,10 @@ extends CharacterBody3D
 
 @export_group("Input Actions")
 
-@export var input_left : String = "ui_left"
-@export var input_right : String = "ui_right"
-@export var input_forward : String = "ui_up"
-@export var input_back : String = "ui_down"
+@export var input_left : String = "move_left"
+@export var input_right : String = "move_right"
+@export var input_forward : String = "move_up"
+@export var input_back : String = "move_down"
 @export var input_jump : String = "ui_accept"
 @export var input_sprint : String = "sprint"
 @export var input_freefly : String = "freefly"
@@ -82,8 +82,6 @@ func _ready() -> void:
 	look_rotation.y = rotation.y
 	look_rotation.x = head.rotation.x
 
-	# Start with the mouse visible.
-	# Click inside the game to begin looking around.
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	mouse_captured = false
 
@@ -94,13 +92,11 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 
-	# Arrow keys can also rotate the player
-	var turn_direction: float = Input.get_axis("ui_right", "ui_left")
+	var turn_direction: float = Input.get_axis(input_right, input_left)
 
 	if turn_direction != 0:
 		rotate_y(turn_direction * rotation_speed * delta)
 
-		# Keep mouse-look rotation synchronized
 		look_rotation.y = rotation.y
 
 
@@ -110,29 +106,9 @@ func _process(delta: float) -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 
-	# Left click inside game = capture mouse
-	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			if not mouse_captured:
-				capture_mouse()
-
-	# ESC = release mouse
-	if event is InputEventKey:
-		if event.keycode == KEY_ESCAPE and event.pressed:
-			release_mouse()
-
-	# Mouse look
-	# This controls BOTH:
-	# left/right AND up/down
-	if mouse_captured and event is InputEventMouseMotion:
-		rotate_look(event.relative)
-
-	# Toggle freefly mode
 	if can_freefly and Input.is_action_just_pressed(input_freefly):
-
 		if not freeflying:
 			enable_freefly()
-
 		else:
 			disable_freefly()
 
@@ -192,16 +168,14 @@ func _physics_process(delta: float) -> void:
 	# MOVEMENT
 	if can_move:
 
-		var input_dir := Input.get_vector(
-			input_left,
-			input_right,
+		var forward_input := Input.get_axis(
 			input_forward,
 			input_back
 		)
 
 		var move_dir := (
 			transform.basis *
-			Vector3(input_dir.x, 0, input_dir.y)
+			Vector3(0, 0, forward_input)
 		).normalized()
 
 

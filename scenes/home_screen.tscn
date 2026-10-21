@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://c8ltbfo210itq"]
 
-[ext_resource type="VideoStream" uid="uid://dvj0jop2svp1o" path="res://models/assets/home_screen/animation.ogv" id="1_lapbl"]
 [ext_resource type="Script" uid="uid://mn4u6qndlrb" path="res://script/home_screen.gd" id="1_tjifo"]
+[ext_resource type="VideoStream" uid="uid://bm0ivdsootf0n" path="res://models/assets/home_screen/updated animation.ogv" id="2_tjifo"]
 [ext_resource type="Texture2D" uid="uid://djhnijro65vyj" path="res://models/assets/home_screen/buttons home screen.PNG" id="2_ujmiq"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tjifo"]
@@ -18,7 +18,7 @@ script = ExtResource("1_tjifo")
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
 offset_right = 1155.0
 offset_bottom = 664.0
-stream = ExtResource("1_lapbl")
+stream = ExtResource("2_tjifo")
 autoplay = true
 expand = true
 loop = true
