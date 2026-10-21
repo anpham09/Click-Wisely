@@ -44,9 +44,8 @@ radius = 0.73027414
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_choun"]
 transparency = 1
-albedo_color = Color(0.20392157, 0.6, 0.80784315, 0)
+albedo_color = Color(0.25205734, 0.4541419, 0.4394196, 1)
 roughness = 0.1
-refraction_enabled = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_ya4ey"]
 material = SubResource("StandardMaterial3D_choun")
@@ -665,6 +664,7 @@ transform = Transform3D(-8.211, 0, -6.644129e-08, 0, 8.007998, 0, 7.1782836e-07,
 size = Vector3(0.2, 7.1628175, 1.7)
 
 [node name="wall high" type="CSGCombiner3D" parent="Walls&Doors"]
+visible = false
 
 [node name="Wall High #4" type="CSGBox3D" parent="Walls&Doors/wall high"]
 transform = Transform3D(1.5, 0, 0, 0, 1, 0, 0, 0, 0.99, 8.2230015, 31.821836, -2.0800002)
@@ -882,6 +882,7 @@ outline_size = 24
 
 [node name="Sio of Offices" type="CSGCombiner3D" parent="Decorations/Sets of offices"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.17028618)
+metadata/_edit_group_ = true
 
 [node name="Office1" parent="Decorations/Sets of offices/Sio of Offices" instance=ExtResource("10_choun")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 18.602217, -0.4961884, -7.9871454)
@@ -896,10 +897,10 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 27.0
 transform = Transform3D(1, 0, 2.3841858e-07, 0, 1, 0, -2.3841858e-07, 0, 1, 25.461758, -0.4961884, -10.286585)
 
 [node name="Office5" parent="Decorations/Sets of offices/Sio of Offices" instance=ExtResource("10_choun")]
-transform = Transform3D(1, 0, 2.3841858e-07, 0, 1, 0, -2.3841858e-07, 0, 1, 21.234652, -0.4961884, -10.286585)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.234652, -0.4961884, -10.286585)
 
 [node name="Office6" parent="Decorations/Sets of offices/Sio of Offices" instance=ExtResource("10_choun")]
-transform = Transform3D(1, 0, 2.3841858e-07, 0, 1, 0, -2.3841858e-07, 0, 1, 16.964197, -0.4961884, -10.286583)
+transform = Transform3D(1, 0, 2.3841858e-07, 0, 1, 0, -2.3841858e-07, 0, 1, 16.956951, -0.5068352, -10.295946)
 
 [node name="Sio of Offices2" type="CSGCombiner3D" parent="Decorations/Sets of offices"]
 transform = Transform3D(0.013962129, 0, -0.99990255, 0, 1, 0, 0.99990255, 0, 0.013962129, -10.655063, 0, -60.120117)

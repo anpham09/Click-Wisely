@@ -378,9 +378,6 @@ func check_input_mappings():
 		can_freefly = false
 
 
-# ==================================================
-# SCORE SYSTEM
-# ==================================================
 
 var score = 0
 
@@ -414,10 +411,6 @@ func add_item():
 
 	check_items()
 
-
-# ==================================================
-# FINAL TILE DIALOGUES
-# ==================================================
 
 var clear_dialogue_resource = preload(
 	"res://scenes/tiles_dialogue/tiles_clear/clear_tiles.dialogue"
@@ -473,9 +466,6 @@ var clues0_balloon_scene = preload(
 )
 
 
-# ==================================================
-# HOLES
-# ==================================================
 
 @onready var correct_hole: CSGBox3D = $"../Floor/Correct Hole Bottom"
 
@@ -502,9 +492,6 @@ var clues0_balloon_scene = preload(
 @onready var clues5_border: CSGBox3D = $"../Floor/Hole Border5"
 
 
-# ==================================================
-# CHECK ALL ITEMS
-# ==================================================
 
 func check_items():
 

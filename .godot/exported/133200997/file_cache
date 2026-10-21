@@ -1,0 +1,33 @@
+res://addons/dialogue_manager/example_balloon/example_balloon.tscn::f1c219b3631ee45373cbf00c3f7c5aae::1779019509::res://.godot/exported/133200997/export-57fc9b32a4ae3d4a3041b46baf4b8f92-example_balloon.scn
+res://addons/dialogue_manager/example_balloon/small_example_balloon.tscn::ad39f864cd724c0ab85c37ccb1b3962b::1779019509::res://.godot/exported/133200997/export-25872080cd204f02261b5746b425708f-small_example_balloon.scn
+res://addons/dialogue_manager/balloon.tscn::3cccb1df28426b31e39b68c7160aef24::1779930521::res://.godot/exported/133200997/export-aaadefbd78b223d94e2c745b49076931-balloon.scn
+res://addons/dialogue_manager/dialogue_label.tscn::5087c11b45dfaf8effc779674dfe11e8::1779019507::res://.godot/exported/133200997/export-e41b7d5321416240678013b406b79557-dialogue_label.scn
+res://addons/dialogue_manager/test_scene.tscn::5946a9a55ceff988ba46e7f734ff0538::1779019511::res://.godot/exported/133200997/export-74a175fe1e216df3bdf79c5c27a2ac2c-test_scene.scn
+res://addons/proto_controller/proto_controller.tscn::aa0455bd7fc1bfe928b25ef44bcdd8df::1792284830::res://.godot/exported/133200997/export-0a12e7b670baa788c9fd3506d9d312e2-proto_controller.scn
+res://models/texture/texture copy.tres::4a66df6bd1a8a45baa06cf042462f841::1778969942::res://.godot/exported/133200997/export-1dbbb89c8f23e987c9340802e90aec96-texture copy.res
+res://models/texture/texture.tres::139560966927c2ebf6dcc2245942972a::1778970322::res://.godot/exported/133200997/export-fd5fd53ab3bcb703a5f7183e496d1195-texture.res
+res://scenes/poster_dialogue/balloon.tscn::7b61fe12cb09b4b2e88caef0612f040b::1792244729::res://.godot/exported/133200997/export-b33b4c978b478c5fc7100bd4ec678405-balloon.scn
+res://scenes/poster_dialogue (2)/balloon.tscn::c77a588d220fc6e75cab103ee7b4c28d::1792244720::res://.godot/exported/133200997/export-a7a5ceacc86d4f347331635452f4381a-balloon.scn
+res://scenes/Risk Items/phone.tscn::162515f356e31ae4754b6c18553cd113::1788373868::res://.godot/exported/133200997/export-4ae59900fa2c7cfbeb56a89d0a615424-phone.scn
+res://scenes/Risk Items/poster_email.tscn::9db4a012f91bccfcdcd8b63ac6975751::1791418365::res://.godot/exported/133200997/export-eec0adf9d898f6f03e4816ecc3aab87e-poster_email.scn
+res://scenes/Risk Items/poster_scan.tscn::83d891b0c98d05d49637f2db84e6627d::1791401075::res://.godot/exported/133200997/export-42602d13f5c850405c841ccc887b70c6-poster_scan.scn
+res://scenes/Risk Items/try.tscn::50190d3eb4628db997a81f0677cdd72c::1792283322::res://.godot/exported/133200997/export-a30d15460d9e06218f6a31c863fe58c4-try.scn
+res://scenes/Risk Items/usb.tscn::e4954587488001bafcee36f731b3f568::1788373868::res://.godot/exported/133200997/export-389fef865d4a6ed139261b3afed9cea6-usb.scn
+res://scenes/Risk Items/usb_confidential.tscn::7e84cc7278a24c6a1768cd917d6d7a34::1792247472::res://.godot/exported/133200997/export-4b50f95d34806bf26a9bbc7215f4b13b-usb_confidential.scn
+res://scenes/Risk Items/usb_exam.tscn::584935b3f98fa5ce22bcdd2f4b712229::1792247344::res://.godot/exported/133200997/export-fe1771af7d5f8e064ab72c35cce0ae9e-usb_exam.scn
+res://scenes/tiles_dialogue/tiles_0clue/balloon.tscn::a0949540031c6c577c1293778f043254::1792267370::res://.godot/exported/133200997/export-42e6e47c917a1db95fc5f1ae2c2d2282-balloon.scn
+res://scenes/tiles_dialogue/tiles_1clue/balloon.tscn::2913c751075a3be5fbfd5fadfa73a5ff::1792267356::res://.godot/exported/133200997/export-6c7170dfa5a73ffe35c97ec3de35e5e0-balloon.scn
+res://scenes/tiles_dialogue/tiles_2clues/balloon.tscn::288304295dda2bd17c49f90f463ed981::1792266002::res://.godot/exported/133200997/export-3e195571686630ca1d926c019906aa05-balloon.scn
+res://scenes/tiles_dialogue/tiles_3clues/balloon.tscn::4b83ed41fb4f407612004edd865451ff::1792265869::res://.godot/exported/133200997/export-b236a4fc0fd02eb2ae57a75252182abb-balloon.scn
+res://scenes/tiles_dialogue/tiles_4clues/balloon.tscn::5cf92397bd70407c5b2b976f48f276e8::1792266013::res://.godot/exported/133200997/export-b84bba9e1a353dcbe8c52543343b9d1f-balloon.scn
+res://scenes/tiles_dialogue/tiles_clear/balloon.tscn::2371e28748a84bd1f6076fccac5700f0::1792262453::res://.godot/exported/133200997/export-3f35ce2fc12a677b41c90906cdd5a21e-balloon.scn
+res://scenes/usb_confidential_dialogue/balloon.tscn::af0b76bc2234f3cc58ea369559ceef9d::1792246804::res://.godot/exported/133200997/export-559a1c3df2c6d77d644405cad64448cb-balloon.scn
+res://scenes/usb_dialogue/balloon.tscn::2638b2346bec3dafd29347b8b1e25bf0::1792247060::res://.godot/exported/133200997/export-9b91df7ecdc111eaa3faa00ca967f28e-balloon.scn
+res://scenes/usb_exam_dialogue/balloon.tscn::3589f7df136a621db551b5c2e086b318::1792247193::res://.godot/exported/133200997/export-0f98cac8ef2b26e759e058fa2f015973-balloon.scn
+res://scenes/dialogue_manager.tscn::683e2440d467bc036c173940c395f9a1::1787772244::res://.godot/exported/133200997/export-f01acd414d4c3ce7b49824aa6eaa26dc-dialogue_manager.scn
+res://scenes/home_screen.tscn::2b29603ff7037722967633471b096e37::1792286819::res://.godot/exported/133200997/export-329caa5f5d208b6b016b2714123075e5-home_screen.scn
+res://scenes/main.tscn::68fe36751467e9952ec2ba1234817ca4::1792290908::res://.godot/exported/133200997/export-3ad5c15c4f3250da0cc7c1af1770d85f-main.scn
+res://scenes/office.tscn::02c333f338e6da2eb6c94aee30dd5dac::1792186138::res://.godot/exported/133200997/export-c8902ea71ee469473bedb4ae9d83df5b-office.scn
+res://scenes/plant.tscn::bfc6a059736d71f27c6979433980a0be::1792198824::res://.godot/exported/133200997/export-4b7191da33327b1bed56dd2d002394b3-plant.scn
+res://scenes/endgame_won.tscn::9e71faf0b10161a3e99f44b8268a008b::1792270037::res://.godot/exported/133200997/export-98d9bd90eb3ff767b7b05360a53cea1c-endgame_won.scn
+res://scenes/endgame_failed.tscn::c98233e7e76c7913bdd30f1b0ea5a9af::1792270079::res://.godot/exported/133200997/export-1ee054145ebe7eb3bdeda8f004c1e59c-endgame_failed.scn
