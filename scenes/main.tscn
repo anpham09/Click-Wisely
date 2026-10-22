@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://bnpmrjo4jn6mi"]
+[gd_scene load_steps=28 format=3 uid="uid://bnpmrjo4jn6mi"]
 
 [ext_resource type="Script" uid="uid://b1bbplq6csmt5" path="res://script/main.gd" id="1_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_ig7tw"]
@@ -48,14 +48,6 @@ albedo_color = Color(0.77254903, 0.84705883, 0.42745098, 1)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_tbgi4"]
 radius = 0.73027414
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_choun"]
-transparency = 1
-albedo_color = Color(0.25205734, 0.4541419, 0.4394196, 1)
-roughness = 0.1
-
-[sub_resource type="BoxMesh" id="BoxMesh_ya4ey"]
-material = SubResource("StandardMaterial3D_choun")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ya4ey"]
 albedo_color = Color(0.78039217, 0.63529414, 0.49803922, 1)
@@ -1102,7 +1094,6 @@ transform = Transform3D(1.0000001, 0, 3.5527137e-15, 0, 1, 0, 0, 0, 1, -1.907348
 
 [node name="Window\'s Glass" type="MeshInstance3D" parent="Windows/Window"]
 transform = Transform3D(-0.025609732, 0.14879772, 0, -3.0890365, -0.0012336111, 0, 0, 0, 5.6617265, 28.759867, 4.0294027, -41.292515)
-mesh = SubResource("BoxMesh_ya4ey")
 skeleton = NodePath("../..")
 
 [node name="Bottom" type="CSGBox3D" parent="Windows/Window"]
@@ -1138,7 +1129,6 @@ transform = Transform3D(-1.0000001, 0, -8.742278e-08, 0, 1, 0, 8.7422784e-08, 0,
 
 [node name="Window\'s Glass" type="MeshInstance3D" parent="Windows/Window2"]
 transform = Transform3D(-0.025609732, 0.14879772, 0, -3.0890365, -0.0012336111, 0, 0, 0, 5.6617265, 28.759867, 4.0294027, -41.292515)
-mesh = SubResource("BoxMesh_ya4ey")
 skeleton = NodePath("../..")
 
 [node name="Bottom" type="CSGBox3D" parent="Windows/Window2"]
@@ -1174,7 +1164,6 @@ transform = Transform3D(-1.0000001, 0, -8.742278e-08, 0, 1, 0, 8.7422784e-08, 0,
 
 [node name="Window\'s Glass" type="MeshInstance3D" parent="Windows/Window3"]
 transform = Transform3D(-0.025609732, 0.14879772, 0, -3.0890365, -0.0012336111, 0, 0, 0, 5.6617265, 28.759867, 4.0294027, -41.292515)
-mesh = SubResource("BoxMesh_ya4ey")
 skeleton = NodePath("../..")
 
 [node name="Bottom" type="CSGBox3D" parent="Windows/Window3"]
@@ -1210,7 +1199,6 @@ transform = Transform3D(-4.3711392e-08, 0, 1, 0, 1, 0, -1.0000001, 0, -4.371139e
 
 [node name="Window\'s Glass" type="MeshInstance3D" parent="Windows/Window4"]
 transform = Transform3D(-0.025609732, 0.14879772, 0, -3.0890365, -0.0012336111, 0, 0, 0, 5.6617265, 28.759867, 4.0294027, -41.292515)
-mesh = SubResource("BoxMesh_ya4ey")
 skeleton = NodePath("../..")
 
 [node name="Bottom" type="CSGBox3D" parent="Windows/Window4"]
@@ -1245,8 +1233,7 @@ mesh = SubResource("BoxMesh_trceg")
 transform = Transform3D(1.0000001, 0, 3.5527137e-15, 0, 1, 0, 0, 0, 1, 0, 0.3, 32.574)
 
 [node name="Window\'s Glass" type="MeshInstance3D" parent="Windows/Window5"]
-transform = Transform3D(-0.025609732, 0.14879772, 0, -3.0890365, -0.0012336111, 0, 0, 0, 5.6617265, 28.759867, 4.0294027, -41.292515)
-mesh = SubResource("BoxMesh_ya4ey")
+transform = Transform3D(-0.04969777, 0.14995804, 0, -5.9945273, -0.0012432308, 0, 0, 0, 5.6617265, 28.759867, 4.0294027, -41.292515)
 skeleton = NodePath("../..")
 
 [node name="Bottom" type="CSGBox3D" parent="Windows/Window5"]
