@@ -70,6 +70,10 @@ var freeflying : bool = false
 
 @onready var head: Node3D = $Head
 @onready var collider: CollisionShape3D = $Collider
+@onready var walking_audio: AudioStreamPlayer = $WalkingAudio
+@onready var click_audio: AudioStreamPlayer = $ClickAudio
+
+
 
 
 # ==================================================
@@ -205,6 +209,7 @@ func _physics_process(delta: float) -> void:
 
 
 	move_and_slide()
+	updated_walking_audio()
 
 
 # ==================================================
@@ -607,3 +612,27 @@ func check_items():
 
 			clues5_hole.visible = true
 			clues5_border.visible = true
+
+func updated_walking_audio():
+	var is_walking = (Input.is_action_pressed(input_forward) or Input.is_action_pressed(input_back))
+	if is_walking and is_on_floor():
+		if not walking_audio.playing:
+			walking_audio.play()
+	else:
+		if walking_audio.playing:
+			walking_audio.stop()
+
+func _input(event: InputEvent) -> void:
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+
+			var control = get_viewport().gui_get_hovered_control()
+
+			while control != null:
+
+				if control is BaseButton:
+					if not control.disabled:
+						click_audio.play()
+					return
+
+				control = control.get_parent() as Control

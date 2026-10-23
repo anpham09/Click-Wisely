@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cnvxmtuxu5hup" path="res://scenes/tiles_dialogue/tiles_2clues/balloon.gd" id="1_bs1sr"]
 [ext_resource type="Resource" uid="uid://cno2oa6v4s33h" path="res://scenes/tiles_dialogue/tiles_2clues/2clues.dialogue" id="2_la4en"]
-[ext_resource type="Texture2D" uid="uid://c20mfyvhge83u" path="res://models/assets/click wisely logo.png" id="3_hdhmf"]
+[ext_resource type="Texture2D" uid="uid://c20mfyvhge83u" path="res://models/assets/screens/click wisely logo.png" id="3_hdhmf"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="4_1cq6e"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="5_8p6vp"]
 

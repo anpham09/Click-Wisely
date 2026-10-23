@@ -1,8 +1,11 @@
-[gd_scene load_steps=28 format=3 uid="uid://bnpmrjo4jn6mi"]
+[gd_scene load_steps=31 format=3 uid="uid://bnpmrjo4jn6mi"]
 
 [ext_resource type="Script" uid="uid://b1bbplq6csmt5" path="res://script/main.gd" id="1_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://cyxkguyqwxbly" path="res://script/failed_area.gd" id="3_a8y0u"]
+[ext_resource type="AudioStream" uid="uid://djhyjcnt3c6tj" path="res://models/assets/music/updated_walking.wav" id="3_jbj1t"]
+[ext_resource type="AudioStream" uid="uid://c7gdx7fy204ef" path="res://models/assets/music/click_sound.wav" id="4_muem4"]
+[ext_resource type="AudioStream" uid="uid://bbdwggoygq5nh" path="res://models/assets/music/PAPER FWOOSH 1 AUDIO + VIDEO.mp3" id="5_dp3eg"]
 [ext_resource type="PackedScene" uid="uid://bg5exoleaiamy" path="res://scenes/Risk Items/usb.tscn" id="5_lquwl"]
 [ext_resource type="Script" uid="uid://cg6u5t0ujxr63" path="res://script/usb_area.gd" id="5_tefeu"]
 [ext_resource type="Script" uid="uid://d2ejye5xbxo04" path="res://script/confidential_usb_area.gd" id="5_ya4ey"]
@@ -101,20 +104,34 @@ can_freefly = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19999999, 0.6, -0.6)
 
 [node name="Score Label" type="Label" parent="ProtoController"]
-offset_left = 42.0
+offset_left = 20.0
 offset_top = 64.0
-offset_right = 209.0
-offset_bottom = 109.0
-theme_override_font_sizes/font_size = 32
+offset_right = 229.0
+offset_bottom = 119.0
+theme_override_colors/font_color = Color(0.91764706, 0.7058824, 0.39215687, 1)
+theme_override_font_sizes/font_size = 40
 text = "Scores: 0/5"
 
 [node name="Items Label" type="Label" parent="ProtoController"]
-offset_left = 58.0
-offset_top = 18.0
-offset_right = 211.0
-offset_bottom = 63.0
-theme_override_font_sizes/font_size = 32
-text = "Items: 0/5"
+offset_left = 17.0
+offset_top = 16.0
+offset_right = 298.0
+offset_bottom = 71.0
+theme_override_colors/font_color = Color(0.77254903, 0.84705883, 0.42745098, 1)
+theme_override_font_sizes/font_size = 40
+text = "Risk Items: 0/5"
+
+[node name="WalkingAudio" type="AudioStreamPlayer" parent="ProtoController"]
+stream = ExtResource("3_jbj1t")
+bus = &"SFX"
+
+[node name="ClickAudio" type="AudioStreamPlayer" parent="ProtoController"]
+stream = ExtResource("4_muem4")
+bus = &"SFX"
+
+[node name="PaperFwoosh" type="AudioStreamPlayer" parent="ProtoController"]
+stream = ExtResource("5_dp3eg")
+bus = &"SFX"
 
 [node name="Labels" type="CSGCombiner3D" parent="."]
 
@@ -1264,9 +1281,10 @@ mesh = SubResource("BoxMesh_trceg")
 transform = Transform3D(0.11482352, 0, 0, 0, -2.2454927e-07, -0.13065165, 0, 5.1370883, -5.710965e-09, 28.448463, 3.9596162, -41.42594)
 mesh = SubResource("BoxMesh_trceg")
 
-[node name="BGM" type="AudioStreamPlayer3D" parent="."]
+[node name="BGM" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("15_jkv2x")
 autoplay = true
+bus = &"BGM"
 
 [connection signal="tree_entered" from="Floor/Correct Hole Bottom" to="." method="_on_correct_hole_bottom_tree_entered"]
 [connection signal="body_entered" from="Floor/Correct Hole Bottom/Area3D" to="Floor/Correct Hole Bottom/Area3D" method="_on_body_entered"]

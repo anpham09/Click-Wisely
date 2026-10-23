@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnv1x7uu7m0ms"
-path="res://.godot/imported/won_endgame.jpeg-7a296135209c7fcfa9906df4cdac301b.ctex"
+uid="uid://c20mfyvhge83u"
+path="res://.godot/imported/click wisely logo.png-bb3dfd1528b9352e285cd9a88bbe7d17.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://models/assets/won_endgame.jpeg"
-dest_files=["res://.godot/imported/won_endgame.jpeg-7a296135209c7fcfa9906df4cdac301b.ctex"]
+source_file="res://models/assets/screens/click wisely logo.png"
+dest_files=["res://.godot/imported/click wisely logo.png-bb3dfd1528b9352e285cd9a88bbe7d17.ctex"]
 
 [params]
 

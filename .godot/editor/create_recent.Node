@@ -1,6 +1,7 @@
+AudioStreamPlayer
+AudioStreamPlayer3D
 Label3D
 CSGCombiner3D
-AudioStreamPlayer3D
 CollisionShape3D
 StaticBody3D
 Area3D
@@ -11,5 +12,3 @@ Camera3D
 ColorRect
 Button
 TextureRect
-VideoStreamPlayer
-AnimationPlayer

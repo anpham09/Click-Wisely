@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://cbi3d56ni7pio"]
 
 [ext_resource type="Script" uid="uid://mn4u6qndlrb" path="res://script/home_screen.gd" id="1_er2qq"]
-[ext_resource type="Texture2D" uid="uid://dnv1x7uu7m0ms" path="res://models/assets/won_endgame.jpeg" id="2_vgnhj"]
+[ext_resource type="Texture2D" uid="uid://dnv1x7uu7m0ms" path="res://models/assets/screens/won_endgame.jpeg" id="2_vgnhj"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tjifo"]
 
