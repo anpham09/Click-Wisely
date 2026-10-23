@@ -1,4 +1,5 @@
 AudioStreamPlayer
+Button
 AudioStreamPlayer3D
 Label3D
 CSGCombiner3D
@@ -10,5 +11,4 @@ MeshInstance3D
 Label
 Camera3D
 ColorRect
-Button
 TextureRect

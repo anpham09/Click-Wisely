@@ -621,6 +621,7 @@ func updated_walking_audio():
 	else:
 		if walking_audio.playing:
 			walking_audio.stop()
+@export_range(0.0, 2.0, 0.05) var click_delay: float = 0.2
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
@@ -633,6 +634,7 @@ func _input(event: InputEvent) -> void:
 				if control is BaseButton:
 					if not control.disabled:
 						click_audio.play()
+						await get_tree().create_timer(click_delay).timeout
 					return
 
 				control = control.get_parent() as Control

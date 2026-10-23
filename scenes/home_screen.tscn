@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://c8ltbfo210itq"]
+[gd_scene load_steps=10 format=3 uid="uid://c8ltbfo210itq"]
 
 [ext_resource type="Script" uid="uid://mn4u6qndlrb" path="res://script/home_screen.gd" id="1_tjifo"]
 [ext_resource type="VideoStream" uid="uid://bm0ivdsootf0n" path="res://models/assets/home_screen/updated animation.ogv" id="2_tjifo"]
-[ext_resource type="Texture2D" uid="uid://djhnijro65vyj" path="res://models/assets/home_screen/buttons home screen.PNG" id="2_ujmiq"]
+[ext_resource type="Texture2D" uid="uid://bs6b3vwkoxthd" path="res://models/assets/screens/updated_home_screen.png" id="3_ih2x6"]
 [ext_resource type="AudioStream" uid="uid://c7gdx7fy204ef" path="res://models/assets/music/click_sound.wav" id="4_bie51"]
+[ext_resource type="Texture2D" uid="uid://c20mfyvhge83u" path="res://models/assets/screens/click wisely logo.png" id="4_ked1l"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tjifo"]
 
@@ -27,14 +28,32 @@ loop = true
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1154.0847
 offset_bottom = 659.0
-texture = ExtResource("2_ujmiq")
+texture = ExtResource("3_ih2x6")
 expand_mode = 1
 
-[node name="Button" type="Button" parent="."]
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = -41.0
+offset_top = -99.0
+offset_right = 745.0
+offset_bottom = 521.0
+texture = ExtResource("4_ked1l")
+expand_mode = 1
+
+[node name="StartButton" type="Button" parent="."]
 offset_left = 38.0
-offset_top = 280.0
+offset_top = 348.0
 offset_right = 538.0
-offset_bottom = 398.0
+offset_bottom = 466.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_tjifo")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_bie51")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ih2x6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ked1l")
+
+[node name="CreditsButton" type="Button" parent="."]
+offset_left = 38.0
+offset_top = 473.0
+offset_right = 538.0
+offset_bottom = 591.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_tjifo")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_bie51")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_ih2x6")
@@ -44,4 +63,5 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_ked1l")
 stream = ExtResource("4_bie51")
 bus = &"SFX"
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="StartButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CreditsButton" to="." method="_on_credits_button_pressed"]

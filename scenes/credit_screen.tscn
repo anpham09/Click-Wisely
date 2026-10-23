@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://ddmj2ybjg5q3s"]
+[gd_scene load_steps=8 format=3 uid="uid://ddmj2ybjg5q3s"]
 
 [ext_resource type="Script" uid="uid://p8r5m07f7yyl" path="res://script/credit_screen.gd" id="1_r3ewm"]
 [ext_resource type="Texture2D" uid="uid://ct1guq4hlqmlb" path="res://models/assets/screens/credit_screen.jpg" id="2_r3ewm"]
+[ext_resource type="AudioStream" uid="uid://c7gdx7fy204ef" path="res://models/assets/music/click_sound.wav" id="3_6w8co"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tjifo"]
 
@@ -29,5 +30,9 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_tjifo")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_bie51")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_ih2x6")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_ked1l")
+
+[node name="ClickAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_6w8co")
+bus = &"SFX"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
