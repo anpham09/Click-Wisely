@@ -1,8 +1,11 @@
+Sprite3D
+Sprite2D
+CSGCombiner3D
 AudioStreamPlayer
+VideoStreamPlayer
 Button
 AudioStreamPlayer3D
 Label3D
-CSGCombiner3D
 CollisionShape3D
 StaticBody3D
 Area3D
@@ -10,5 +13,3 @@ CSGBox3D
 MeshInstance3D
 Label
 Camera3D
-ColorRect
-TextureRect

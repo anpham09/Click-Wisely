@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dpxq3tqysub2l"]
 
-[ext_resource type="Script" uid="uid://mn4u6qndlrb" path="res://script/home_screen.gd" id="1_vwxk6"]
+[ext_resource type="Script" uid="uid://dv3tp65d7looe" path="res://script/real_endgame_won.gd" id="1_wq48f"]
 [ext_resource type="Texture2D" uid="uid://bfsc0kqtxye20" path="res://models/assets/screens/failed_endgame.jpeg" id="2_wq48f"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tjifo"]
@@ -12,7 +12,7 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ked1l"]
 
 [node name="Home Screen" type="Node2D"]
-script = ExtResource("1_vwxk6")
+script = ExtResource("1_wq48f")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1154.0847

@@ -10,3 +10,8 @@ res://script/usb_area.gd
 res://script/exam_usb_area.gd
 res://script/poster_email_area.gd
 res://script/poster_scan_area.gd
+res://script/main.gd
+res://scenes/edited_home_screen.tscn
+res://scenes/endgame_won.tscn
+res://script/real_endgame_won.gd
+res://scenes/endgame_failed.tscn

@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://blfahgohl35nm"]
+
+[ext_resource type="VideoStream" uid="uid://bm0ivdsootf0n" path="res://models/assets/home_screen/updated animation.ogv" id="1_sp80a"]
+[ext_resource type="Texture2D" uid="uid://bs6b3vwkoxthd" path="res://models/assets/screens/updated_home_screen.png" id="2_phpw8"]
+
+[node name="Edited_HomeScreen" type="Node2D"]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_right = 1151.0
+offset_bottom = 667.0
+stream = ExtResource("1_sp80a")
+autoplay = true
+expand = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1154.0847
+offset_bottom = 659.0
+texture = ExtResource("2_phpw8")
+expand_mode = 1

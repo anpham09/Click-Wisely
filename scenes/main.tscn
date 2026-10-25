@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://bnpmrjo4jn6mi"]
+[gd_scene load_steps=35 format=3 uid="uid://bnpmrjo4jn6mi"]
 
 [ext_resource type="Script" uid="uid://b1bbplq6csmt5" path="res://script/main.gd" id="1_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_ig7tw"]
@@ -18,6 +18,10 @@
 [ext_resource type="PackedScene" uid="uid://c5h0kiedxsiye" path="res://scenes/plant.tscn" id="10_ya4ey"]
 [ext_resource type="Script" uid="uid://cneat5301eh4i" path="res://scenes/level_changer.gd" id="13_trceg"]
 [ext_resource type="AudioStream" uid="uid://bfgjmtngk7t3d" path="res://models/assets/music/Game_main_music.mp3" id="15_jkv2x"]
+[ext_resource type="Texture2D" uid="uid://dgt5cicucspfr" path="res://models/assets/screens/windows/window_img1_with cat.png" id="18_0ld40"]
+[ext_resource type="Texture2D" uid="uid://02swp82cvknr" path="res://models/assets/screens/windows/window_img2_1tree.png" id="19_gqmmt"]
+[ext_resource type="Texture2D" uid="uid://dtb0mfes8785t" path="res://models/assets/screens/windows/window_img3_2trees.png" id="20_jscy8"]
+[ext_resource type="Texture2D" uid="uid://dgryy78waswug" path="res://models/assets/screens/windows/window_img4_nothing.png" id="20_yc10j"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7dm0k"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -1280,6 +1284,28 @@ mesh = SubResource("BoxMesh_trceg")
 [node name="Horizontal" type="MeshInstance3D" parent="Windows/Window5"]
 transform = Transform3D(0.11482352, 0, 0, 0, -2.2454927e-07, -0.13065165, 0, 5.1370883, -5.710965e-09, 28.448463, 3.9596162, -41.42594)
 mesh = SubResource("BoxMesh_trceg")
+
+[node name="OutsideView" type="CSGCombiner3D" parent="Windows"]
+
+[node name="Window1" type="Sprite3D" parent="Windows/OutsideView"]
+transform = Transform3D(-1.11537695e-08, 0, 0.25, 0, 0.25, 0, -0.2551685, 0, -1.0927847e-08, 29.157934, 4.29527, -8.799682)
+texture = ExtResource("18_0ld40")
+
+[node name="Window1 2" type="Sprite3D" parent="Windows/OutsideView"]
+transform = Transform3D(-1.11537695e-08, 0, 0.25, 0, 0.25, 0, -0.2551685, 0, -1.0927847e-08, -10, 3.916, -52.092)
+texture = ExtResource("18_0ld40")
+
+[node name="Window2" type="Sprite3D" parent="Windows/OutsideView"]
+transform = Transform3D(-1.11537695e-08, 0, 0.25, 0, 0.25, 0, -0.2551685, 0, -1.0927847e-08, 29.145483, 3.9159508, -41.370064)
+texture = ExtResource("19_gqmmt")
+
+[node name="Window3" type="Sprite3D" parent="Windows/OutsideView"]
+transform = Transform3D(-1.11537695e-08, 0, 0.25, 0, 0.25, 0, -0.2551685, 0, -1.0927847e-08, -9.8917885, 3.9664278, -25.952284)
+texture = ExtResource("20_jscy8")
+
+[node name="Window4" type="Sprite3D" parent="Windows/OutsideView"]
+transform = Transform3D(-0.2551685, 0, -2.1855694e-08, 0, 0.25, 0, 2.2307539e-08, 0, -0.25, 16.229, 3.916, -63.29)
+texture = ExtResource("20_yc10j")
 
 [node name="BGM" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("15_jkv2x")

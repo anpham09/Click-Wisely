@@ -7,8 +7,8 @@ var dialogue_resource = preload("res://scenes/usb_dialogue/usb.dialogue")
 var balloon_scene = preload("res://addons/dialogue_manager/balloon.tscn")
 
 func _ready() -> void:
-	#try()
 	pass
+	
 
 #func try():
 	#var balloon = balloon_scene.instantiate()
