@@ -1,4 +1,4 @@
-# Click Wisely
+# Click Wisely!
 ## Introduction
 
 ## Features
