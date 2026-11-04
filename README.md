@@ -21,4 +21,4 @@ We believe not all cybersecurity threats come through suspicious emails and onli
 - More interactive risk situations including IT employee, boss, raffle iPad
 - Dialogue styling
 - Different levels unlock different areas inside the office
-- Boss fight future
+- Boss fight feature
