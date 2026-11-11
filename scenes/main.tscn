@@ -623,6 +623,7 @@ transform = Transform3D(-0.13103329, -0.009665071, -0.04197422, -0.31221402, 0.2
 omni_range = 4096.0
 
 [node name="Walls&Doors" type="CSGCombiner3D" parent="."]
+visible = false
 material_override = SubResource("StandardMaterial3D_o6xl0")
 use_collision = true
 
@@ -642,16 +643,16 @@ transform = Transform3D(1.5, 0, 0, 0, 1, 0, 0, 0, 0.99, 15.401459, 3.5500002, -2
 size = Vector3(18.151392, 8.1, 0.61103517)
 
 [node name="CSGBox3D6" type="CSGBox3D" parent="Walls&Doors"]
-transform = Transform3D(1.5, 0, 0, 0, 1, 0, 0, 0, 0.99, 9.586676, 2.972815, 3.875806)
-size = Vector3(26.305548, 6.94563, 0.11588135)
+transform = Transform3D(1.5, 0, 0, 0, 1, 0, 0, 0, 0.99, 9.586676, 7.7378726, 3.875806)
+size = Vector3(26.305548, 16.475744, 0.11588135)
 
 [node name="CSGBox3D7" type="CSGBox3D" parent="Walls&Doors"]
-transform = Transform3D(0.0015183948, 0, -0.9899994, 0, 0.9999999, 0, 1.4999989, 0, 0.0010021534, -4.161199, 2.9016054, 1.179759)
-size = Vector3(4.6659865, 7.0880494, 0.08723146)
+transform = Transform3D(0.0015183948, 0, -0.9899994, 0, 0.9999999, 0, 1.4999989, 0, 0.0010021534, -4.161199, 8.264603, 1.179759)
+size = Vector3(4.6659865, 17.814045, 0.08723146)
 
 [node name="CSGBox3D8" type="CSGBox3D" parent="Walls&Doors"]
-transform = Transform3D(0.0015183948, 0, -0.9899994, 0, 0.9999999, 0, 1.4999989, 0, 0.0010021534, 4.1579967, 2.972815, 1.2256727)
-size = Vector3(4.6047683, 6.94563, 0.08723146)
+transform = Transform3D(0.0015183948, 0, -0.9899994, 0, 0.9999999, 0, 1.4999989, 0, 0.0010021534, 4.1579967, 7.989337, 1.2256727)
+size = Vector3(4.6047683, 16.978674, 0.08723146)
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="Walls&Doors"]
 transform = Transform3D(1.5, 0, 0, 0, 1, 0, 0, 0, 0.99, -5.8678403, 3.5999994, -2.0800004)
@@ -1311,6 +1312,7 @@ texture = ExtResource("20_yc10j")
 stream = ExtResource("15_jkv2x")
 autoplay = true
 bus = &"BGM"
+parameters/looping = true
 
 [connection signal="tree_entered" from="Floor/Correct Hole Bottom" to="." method="_on_correct_hole_bottom_tree_entered"]
 [connection signal="body_entered" from="Floor/Correct Hole Bottom/Area3D" to="Floor/Correct Hole Bottom/Area3D" method="_on_body_entered"]

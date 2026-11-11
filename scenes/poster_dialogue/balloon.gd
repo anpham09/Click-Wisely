@@ -21,6 +21,10 @@ extends CanvasLayer
 
 ## A sound player for voice lines (if they exist).
 @onready var audio_stream_player: AudioStreamPlayer = %AudioStreamPlayer
+@onready var portrait: TextureRect = $Balloon/TextureRect
+@onready var dim_cover: ColorRect = $Balloon/cover
+@onready var dialogue_box: PanelContainer = $Balloon/MarginContainer/PanelContainer
+
 
 ## Temporary game states
 var temporary_game_states: Array = []
@@ -85,6 +89,7 @@ func _ready() -> void:
 		if not is_instance_valid(dialogue_resource):
 			assert(false, DMConstants.get_error_message(DMConstants.ERR_MISSING_RESOURCE_FOR_AUTOSTART))
 		start()
+	setup_dialogue_box()
 
 
 func _process(delta: float) -> void:
@@ -137,6 +142,8 @@ func apply_dialogue_line() -> void:
 
 	responses_menu.hide()
 	responses_menu.responses = dialogue_line.responses
+	style_responses()
+
 
 	# Show our balloon
 	balloon.show()
@@ -211,6 +218,78 @@ func _on_balloon_gui_input(event: InputEvent) -> void:
 
 func _on_responses_menu_response_selected(response: DialogueResponse) -> void:
 	next(response.next_id)
+
+func setup_dialogue_box() -> void:
+	var outer = dialogue_box.get_parent() as MarginContainer
+
+	outer.set_anchors_preset(Control.PRESET_BOTTOM_WIDE)
+	outer.offset_left = 0
+	outer.offset_right = 0
+	outer.offset_bottom = 0
+	outer.offset_top = -380
+	outer.add_theme_constant_override("margin_left", 0)
+	outer.add_theme_constant_override("margin_right", 0)
+	outer.add_theme_constant_override("margin_top", 0)
+	outer.add_theme_constant_override("margin_bottom", 0)
+
+	var bar = StyleBoxFlat.new()
+	bar.bg_color = Color(0, 0, 0, 0.82)
+	bar.content_margin_left = 0
+	bar.content_margin_right = 0
+	bar.content_margin_top = 0
+	bar.content_margin_bottom = 0
+	dialogue_box.add_theme_stylebox_override("panel", bar)
+
+	var inner = dialogue_box.get_node("MarginContainer") as MarginContainer
+	inner.add_theme_constant_override("margin_left", 40)
+	inner.add_theme_constant_override("margin_right", 40)
+	inner.add_theme_constant_override("margin_top", 28)
+	inner.add_theme_constant_override("margin_bottom", 28)
+
+	dialogue_label.add_theme_font_size_override("normal_font_size", 28)
+	dialogue_label.add_theme_color_override("font_color", Color.WHITE)
+	character_label.add_theme_font_size_override("normal_font_size", 20)
+	character_label.add_theme_color_override("font_color", Color(0.85, 0.85, 0.85))
+
+	portrait.set_anchors_preset(Control.PRESET_FULL_RECT)
+	portrait.offset_left = 0
+	portrait.offset_right = 0
+	portrait.offset_top = 0
+	portrait.offset_bottom = 0
+	portrait.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	portrait.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
+	dim_cover.visible = false
+
+	
+	var text_box = dialogue_box.get_node("MarginContainer/HBoxContainer/VBoxContainer") as VBoxContainer
+	text_box.add_theme_constant_override("separation", 16)
+	if responses_menu.get_parent() != text_box:
+		responses_menu.get_parent().remove_child(responses_menu)
+		text_box.add_child(responses_menu)
+	responses_menu.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	responses_menu.add_theme_constant_override("separation", 12)
+
+
+
+func style_responses() -> void:
+	for child in responses_menu.get_children():
+		if child is Button and not child.text.is_empty():
+			child.add_theme_font_size_override("font_size", 28)
+			child.add_theme_color_override("font_color", Color.WHITE)
+			child.add_theme_color_override("font_hover_color", Color("E3F2FD"))
+			child.add_theme_color_override("font_pressed_color", Color("E3F2FD"))
+			child.add_theme_color_override("font_focus_color", Color("E3F2FD"))
+			child.alignment = HORIZONTAL_ALIGNMENT_LEFT
+			child.custom_minimum_size = Vector2(0, 52)
+			var empty = StyleBoxEmpty.new()
+			child.add_theme_stylebox_override("normal", empty)
+			child.add_theme_stylebox_override("hover", empty)
+			child.add_theme_stylebox_override("pressed", empty)
+			child.add_theme_stylebox_override("focus", empty)
+			child.add_theme_stylebox_override("disabled", empty)
+			if not child.text.begins_with("> "):
+				child.text = "> " + child.text
+
 
 
 #endregion
