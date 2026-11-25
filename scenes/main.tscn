@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://bnpmrjo4jn6mi"]
+[gd_scene load_steps=36 format=3 uid="uid://bnpmrjo4jn6mi"]
 
 [ext_resource type="Script" uid="uid://b1bbplq6csmt5" path="res://script/main.gd" id="1_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_ig7tw"]
@@ -16,6 +16,7 @@
 [ext_resource type="Script" uid="uid://0dmp66q8o51w" path="res://script/poster_email_area.gd" id="9_85g3d"]
 [ext_resource type="PackedScene" uid="uid://bpnrv560rqgs7" path="res://scenes/office.tscn" id="10_choun"]
 [ext_resource type="PackedScene" uid="uid://c5h0kiedxsiye" path="res://scenes/plant.tscn" id="10_ya4ey"]
+[ext_resource type="PackedScene" uid="uid://do72stomwxql3" path="res://scenes/Risk Items/usb_exam.tscn" id="11_pm3ni"]
 [ext_resource type="Script" uid="uid://cneat5301eh4i" path="res://scenes/level_changer.gd" id="13_trceg"]
 [ext_resource type="AudioStream" uid="uid://bfgjmtngk7t3d" path="res://models/assets/music/Game_main_music.mp3" id="15_jkv2x"]
 [ext_resource type="Texture2D" uid="uid://dgt5cicucspfr" path="res://models/assets/screens/windows/window_img1_with cat.png" id="18_0ld40"]
@@ -623,7 +624,6 @@ transform = Transform3D(-0.13103329, -0.009665071, -0.04197422, -0.31221402, 0.2
 omni_range = 4096.0
 
 [node name="Walls&Doors" type="CSGCombiner3D" parent="."]
-visible = false
 material_override = SubResource("StandardMaterial3D_o6xl0")
 use_collision = true
 
@@ -823,20 +823,20 @@ text = "Confidential USB"
 font_size = 80
 outline_size = 24
 
-[node name="Exam USB" parent="Items/USBs" instance=ExtResource("5_lquwl")]
-transform = Transform3D(0.68235564, 0, -0.73102033, 0, 1, 0, 0.73102033, 0, 0.68235564, 2.1015015, -3.6000001, -37.38324)
+[node name="Exam USB2" parent="Items/USBs" instance=ExtResource("11_pm3ni")]
+transform = Transform3D(0.6819984, 0, -0.7313537, 0, 1, 0, 0.7313537, 0, 0.6819984, 1.3782272, -4.3056397, -37.15759)
 
-[node name="Area3D" type="Area3D" parent="Items/USBs/Exam USB"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.27708387, 0)
+[node name="Area3D" type="Area3D" parent="Items/USBs/Exam USB2"]
+transform = Transform3D(0.68235564, 0, -0.73102033, 0, 1, 0, 0.73102033, 0, 0.68235564, 2.1080227, -3.3329842, -37.38941)
 collision_mask = 2
 script = ExtResource("6_eb6dy")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Items/USBs/Exam USB/Area3D"]
-transform = Transform3D(4.5383015, 0, -2.3841858e-07, 0, 5.480347, 0, 0, 0, 5.3376226, 1.5388279, 2.7220187, -2.8318787)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Items/USBs/Exam USB2/Area3D"]
+transform = Transform3D(4.5383077, 0, -6.2584877e-07, 0, 5.480347, 0, -5.9604645e-08, 0, 5.3376226, 25.04523, 6.0338364, 24.15681)
 shape = SubResource("SphereShape3D_tbgi4")
 
-[node name="USB Label2" type="Label3D" parent="Items/USBs/Exam USB"]
-transform = Transform3D(0.68235564, 0, 0.73102033, 0, 1, 0, -0.73102033, 0, 0.68235564, 1.272892, 5.283249, -2.3516846)
+[node name="USB Label2" type="Label3D" parent="Items/USBs/Exam USB2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.695717, 1.6731808, -38.063583)
 billboard = 1
 text = "Final Exam Key?"
 font_size = 80
@@ -1323,7 +1323,7 @@ parameters/looping = true
 [connection signal="body_entered" from="Floor/InCorrect Hole #5/Area3D6" to="Floor/InCorrect Hole #5/Area3D6" method="_on_body_entered"]
 [connection signal="body_entered" from="Items/USBs/Regular USB/Area3D" to="Items/USBs/Regular USB/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Items/USBs/Confidential USB/Area3D" to="Items/USBs/Confidential USB/Area3D" method="_on_body_entered"]
-[connection signal="body_entered" from="Items/USBs/Exam USB/Area3D" to="Items/USBs/Exam USB/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Items/USBs/Exam USB2/Area3D" to="Items/USBs/Exam USB2/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Items/Posters/Poster_scan/Area3D2" to="Items/Posters/Poster_scan/Area3D2" method="_on_body_entered"]
 [connection signal="body_entered" from="Items/Posters/Poster_scan2/Area3D2" to="Items/Posters/Poster_scan2/Area3D2" method="_on_body_entered"]
 [connection signal="body_entered" from="Items/Posters/Poster_email/Area3D2" to="Items/Posters/Poster_email/Area3D2" method="_on_body_entered"]

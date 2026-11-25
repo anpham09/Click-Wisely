@@ -1,2 +1,16 @@
 res://scenes/main.tscn
 res://scenes/poster_dialogue/balloon.gd
+res://scenes/poster_dialogue (2)/balloon.gd
+res://scenes/tiles_dialogue/tiles_0clue/balloon.gd
+res://scenes/tiles_dialogue/tiles_1clue/balloon.gd
+res://scenes/tiles_dialogue/tiles_2clues/balloon.gd
+res://scenes/tiles_dialogue/tiles_3clues/balloon.gd
+res://scenes/tiles_dialogue/tiles_4clues/balloon.gd
+res://scenes/tiles_dialogue/tiles_clear/balloon.gd
+res://scenes/usb_confidential_dialogue/balloon.gd
+res://scenes/usb_dialogue/balloon.gd
+res://scenes/usb_exam_dialogue/balloon.gd
+res://scenes/tiles_dialogue/tiles_1clue/balloon.tscn
+res://scenes/usb_exam_dialogue/balloon.tscn
+res://scenes/Risk Items/usb_exam.tscn
+res://script/exam_usb_area.gd

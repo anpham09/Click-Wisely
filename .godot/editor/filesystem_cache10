@@ -1,5 +1,5 @@
 f098f8d3115d962055284dee314b4f89
-::res://::1794182505
+::res://::1795119949
 default_bus_layout.tres::AudioBusLayout::1506829534921103537::1792726309::0::1::::<><><>0<>0<><>::
 export_presets.cfg::TextFile::-1::1792934727::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D::8529882578444194698::1778935123::1791407142::1::::<><><>0<>0<>c11caf074eddd1c038d637c8c7bf31eb<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.s3tc.ctex::
@@ -9,14 +9,14 @@ README.md::TextFile::-1::1788393445::0::1::::<><><>0<>0<><>::
 balloon.gd::GDScript::6767699911491895410::1779019958::0::1::::<>CanvasLayer<><>0<>0<><>::
 balloon.tscn::PackedScene::8063881965420732935::1779930521::0::1::::<><><>0<>0<><>::uid://c3ola8iy78qbi::::res://addons/dialogue_manager/balloon.gd<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn<>uid://bb52rsfwhkxbn::::res://addons/dialogue_manager/dialogue_responses_menu.gd
 constants.gd::GDScript::4240262336831424009::1779019507::0::1::::DMConstants<>RefCounted<><>0<>0<><>::
-dialogue_label.gd::GDScript::480611383085669467::1779019507::0::1::::DialogueLabel<>RichTextLabel<>res://addons/dialogue_manager/assets/icon.svg<>0<>1<><>::
+dialogue_label.gd::GDScript::480611383085669467::1779019507::0::1::::DialogueLabel<>RichTextLabel<><>0<>1<><>::
 dialogue_label.tscn::PackedScene::5518490004210093266::1779019507::0::1::::<><><>0<>0<><>::uid://g32um0mltv5d::::res://addons/dialogue_manager/dialogue_label.gd
 dialogue_line.gd::GDScript::1208905219044177333::1779019507::0::1::::DialogueLine<>RefCounted<><>0<>0<><>::
 dialogue_manager.gd::GDScript::6774079045493014679::1779019507::0::1::::<>Node<><>0<>0<><>::
 dialogue_processor.gd::GDScript::900179394300351269::1779019507::0::1::::DMDialogueProcessor<>RefCounted<><>0<>0<><>::
-dialogue_resource.gd::GDScript::7268423792262407282::1779019507::0::1::::DialogueResource<>Resource<>res://addons/dialogue_manager/assets/icon.svg<>0<>1<><>::
+dialogue_resource.gd::GDScript::7268423792262407282::1779019507::0::1::::DialogueResource<>Resource<><>0<>1<><>::
 dialogue_response.gd::GDScript::5668140482552713515::1779019508::0::1::::DialogueResponse<>RefCounted<><>0<>0<><>::
-dialogue_responses_menu.gd::GDScript::2520211531407682507::1779019508::0::1::::DialogueResponsesMenu<>Container<>res://addons/dialogue_manager/assets/responses_menu.svg<>0<>0<><>::
+dialogue_responses_menu.gd::GDScript::2520211531407682507::1779019508::0::1::::DialogueResponsesMenu<>Container<><>0<>0<><>::
 editor_translation_parser_plugin.gd::GDScript::6952218891186463517::1779019508::0::1::::DMTranslationParserPlugin<>EditorTranslationParserPlugin<><>0<>0<><>::
 export_plugin.gd::GDScript::1265275163198105838::1779019509::0::1::::DMExportPlugin<>EditorExportPlugin<><>0<>0<><>::
 import_plugin.gd::GDScript::7696928728755687928::1779019509::0::1::::DMImportPlugin<>EditorImportPlugin<><>0<>1<><>::
@@ -104,10 +104,11 @@ PAPER FWOOSH 1 AUDIO + VIDEO.mp3::AudioStreamMP3::2464149487064099225::179272723
 updated_walking.wav::AudioStreamWAV::7806885694101515515::1792726201::1792726285::1::::<><><>0<>0<>0e361a0c6404a85e87cca67bcaaaa955<>res://.godot/imported/updated_walking.wav-5650883f6bc09a2fd6fa738727f2a30d.sample::
 WALKING AUDIO.mp3::AudioStreamMP3::5399361572470947933::1792708468::1792708528::1::::<><><>0<>0<>2c262fca74588892b2c42ca606439011<>res://.godot/imported/WALKING AUDIO.mp3-3eecc5ddb7739d9796e0c8352b62c493.mp3str::
 WALKING AUDIO.wav::AudioStreamWAV::6544728157536439220::1792708942::1792708961::1::::<><><>0<>0<>230a14d03723bfb04b3d820d3532cfa8<>res://.godot/imported/WALKING AUDIO.wav-1a42d9323b82ebe482f69defa6dba6d6.sample::
-::res://models/assets/risks items/::1792283216
+::res://models/assets/risks items/::1795119968
 Game Phone small.glb::PackedScene::5884749974900460010::1787680056::1791407143::1::::<><><>0<>0<>aec6de447f23cbc64c29be47f7a48691<>res://.godot/imported/Game Phone small.glb-e18e2bd88cc5016fb5f8685814f8a470.scn::
 Game USB confidential.glb::PackedScene::3339187854874628536::1792246498::1792247298::1::::<><><>0<>0<>37b94abf620b314522bb1ff3e871c0a4<>res://.godot/imported/Game USB confidential.glb-d4a76b43f33988e8d42f0855aaa4969f.scn::
 Game USB final exam Key.glb::PackedScene::5862227864764366057::1792246489::1792247336::1::::<><><>0<>0<>053f448a4f31d0da8d1fc351abd71754<>res://.godot/imported/Game USB final exam Key.glb-300f3b3d0c3985df2ed22458b84543df.scn::
+Game USB Salaries.glb::PackedScene::2489739002223127710::1795119967::1795119992::1::::<><><>0<>0<>0fed48e6176db94b028af3d1876b1dff<>res://.godot/imported/Game USB Salaries.glb-7fd69e3152e48c5dce2112a9e8a84ace.scn::
 Game USB.glb::PackedScene::8345556687556641537::1787680059::1791407145::1::::<><><>0<>0<>2f2fe7a9713165a3ea26b16d4f7d213d<>res://.godot/imported/Game USB.glb-0937c4cdc5b1df2e22fc6e0a53fd266b.scn::
 Poster_email.png::CompressedTexture2D::2471554443123345353::1791400846::1791418333::1::::<><><>0<>0<>d054f5628b4959be6f2ed45ef9365f98<>res://.godot/imported/Poster_email.png-e3ee7e510ffbf174386f7081ec33edc6.s3tc.ctex::
 Poster_scan.png::CompressedTexture2D::2703588747103663851::1791400846::1791407142::1::::<><><>0<>0<>fdf50581d5a258eb609bdce443aa81b5<>res://.godot/imported/Poster_scan.png-f1b04683d540a5a67a103b8939d92af3.s3tc.ctex::
@@ -131,7 +132,7 @@ Game Floor Plant ZZ.glb::PackedScene::2068749156535860514::1792198322::179219874
 ::res://models/texture/::1786807931
 texture copy.tres::StandardMaterial3D::5535017377353695351::1778969942::0::1::::<><><>0<>0<><>::uid://qbv6rdy2m5di::::res://Assets/fbx/dungeon_texture.png
 texture.tres::StandardMaterial3D::77419719994275202::1778970322::0::1::::<><><>0<>0<><>::uid://bo28ruorwwcwc::::res://Assets/textures/dungeon_texture.png
-::res://scenes/::1792934636
+::res://scenes/::1795119796
 credit_screen.tscn::PackedScene::7395197046935791290::1792728621::0::1::::<><><>0<>0<><>::uid://p8r5m07f7yyl::::res://script/credit_screen.gd<>uid://ct1guq4hlqmlb::::res://models/assets/screens/credit_screen.jpg<>uid://c7gdx7fy204ef::::res://models/assets/music/click_sound.wav
 dialogue_manager.tscn::PackedScene::8365390708153604851::1787772244::0::1::::<><><>0<>0<><>::uid://cqgnd34mxs3d4::::res://script/dialogue_manager.gd
 edited_home_screen.tscn::PackedScene::3168832690140336430::1792932603::0::1::::<><><>0<>0<><>::uid://bm0ivdsootf0n::::res://models/assets/home_screen/updated animation.ogv<>uid://bs6b3vwkoxthd::::res://models/assets/screens/updated_home_screen.png
@@ -139,17 +140,17 @@ endgame_failed.tscn::PackedScene::8260597891882580069::1792933285::0::1::::<><><
 endgame_won.tscn::PackedScene::4861252290427956154::1792933030::0::1::::<><><>0<>0<><>::uid://dv3tp65d7looe::::res://script/real_endgame_won.gd<>uid://dnv1x7uu7m0ms::::res://models/assets/screens/won_endgame.jpeg
 home_screen.tscn::PackedScene::7112937056898902270::1792932750::0::1::::<><><>0<>0<><>::uid://mn4u6qndlrb::::res://script/home_screen.gd<>uid://bm0ivdsootf0n::::res://models/assets/home_screen/updated animation.ogv<>uid://bs6b3vwkoxthd::::res://models/assets/screens/updated_home_screen.png<>uid://c7gdx7fy204ef::::res://models/assets/music/click_sound.wav<>uid://c20mfyvhge83u::::res://models/assets/screens/click wisely logo.png
 level_changer.gd::GDScript::5693589395906879838::1792284184::0::1::::<>Area3D<><>0<>0<><>::
-main.tscn::PackedScene::3330600775375614132::1792934636::0::1::::<><><>0<>0<><>::uid://b1bbplq6csmt5::::res://script/main.gd<>uid://bs72ogkvdd7d6::::res://addons/proto_controller/proto_controller.tscn<>uid://cyxkguyqwxbly::::res://script/failed_area.gd<>uid://djhyjcnt3c6tj::::res://models/assets/music/updated_walking.wav<>uid://c7gdx7fy204ef::::res://models/assets/music/click_sound.wav<>uid://bbdwggoygq5nh::::res://models/assets/music/PAPER FWOOSH 1 AUDIO + VIDEO.mp3<>uid://bg5exoleaiamy::::res://scenes/Risk Items/usb.tscn<>uid://cg6u5t0ujxr63::::res://script/usb_area.gd<>uid://d2ejye5xbxo04::::res://script/confidential_usb_area.gd<>uid://b0fh32v35kaeo::::res://script/exam_usb_area.gd<>uid://b87h5yun8ri11::::res://scenes/Risk Items/poster_scan.tscn<>uid://yjusiqkrbuut::::res://scenes/Risk Items/poster_email.tscn<>uid://c5sq2kn3i7doq::::res://script/poster_scan_area.gd<>uid://0dmp66q8o51w::::res://script/poster_email_area.gd<>uid://bpnrv560rqgs7::::res://scenes/office.tscn<>uid://c5h0kiedxsiye::::res://scenes/plant.tscn<>uid://cneat5301eh4i::::res://scenes/level_changer.gd<>uid://bfgjmtngk7t3d::::res://models/assets/music/Game_main_music.mp3<>uid://dgt5cicucspfr::::res://models/assets/screens/windows/window_img1_with cat.png<>uid://02swp82cvknr::::res://models/assets/screens/windows/window_img2_1tree.png<>uid://dtb0mfes8785t::::res://models/assets/screens/windows/window_img3_2trees.png<>uid://dgryy78waswug::::res://models/assets/screens/windows/window_img4_nothing.png
+main.tscn::PackedScene::3330600775375614132::1794520338::0::1::::<><><>0<>0<><>::uid://b1bbplq6csmt5::::res://script/main.gd<>uid://bs72ogkvdd7d6::::res://addons/proto_controller/proto_controller.tscn<>uid://cyxkguyqwxbly::::res://script/failed_area.gd<>uid://djhyjcnt3c6tj::::res://models/assets/music/updated_walking.wav<>uid://c7gdx7fy204ef::::res://models/assets/music/click_sound.wav<>uid://bbdwggoygq5nh::::res://models/assets/music/PAPER FWOOSH 1 AUDIO + VIDEO.mp3<>uid://bg5exoleaiamy::::res://scenes/Risk Items/usb.tscn<>uid://cg6u5t0ujxr63::::res://script/usb_area.gd<>uid://d2ejye5xbxo04::::res://script/confidential_usb_area.gd<>uid://b0fh32v35kaeo::::res://script/exam_usb_area.gd<>uid://b87h5yun8ri11::::res://scenes/Risk Items/poster_scan.tscn<>uid://yjusiqkrbuut::::res://scenes/Risk Items/poster_email.tscn<>uid://c5sq2kn3i7doq::::res://script/poster_scan_area.gd<>uid://0dmp66q8o51w::::res://script/poster_email_area.gd<>uid://bpnrv560rqgs7::::res://scenes/office.tscn<>uid://c5h0kiedxsiye::::res://scenes/plant.tscn<>uid://cneat5301eh4i::::res://scenes/level_changer.gd<>uid://bfgjmtngk7t3d::::res://models/assets/music/Game_main_music.mp3<>uid://dgt5cicucspfr::::res://models/assets/screens/windows/window_img1_with cat.png<>uid://02swp82cvknr::::res://models/assets/screens/windows/window_img2_1tree.png<>uid://dtb0mfes8785t::::res://models/assets/screens/windows/window_img3_2trees.png<>uid://dgryy78waswug::::res://models/assets/screens/windows/window_img4_nothing.png
 office.tscn::PackedScene::3467161564364077580::1792330012::0::1::::<><><>0<>0<><>::uid://tb0we4rsi0id::::res://models/decorations/Back facing desk + extra.glb
 plant.tscn::PackedScene::6894493530097580980::1792198824::0::1::::<><><>0<>0<><>::uid://4qd84165dy8i::::res://models/decorations/Game Floor Plant ZZ.glb
-::res://scenes/poster_dialogue/::1792267761
-balloon.gd::GDScript::7348915378198260295::1791407271::0::1::::<>CanvasLayer<><>0<>0<><>::
+::res://scenes/poster_dialogue/::1794406072
+balloon.gd::GDScript::7348915378198260295::1794406070::0::1::::<>CanvasLayer<><>0<>0<><>::
 balloon.tscn::PackedScene::6073690029168217139::1792244729::0::1::::<><><>0<>0<><>::uid://dcx4tel84spj0::::res://scenes/poster_dialogue/balloon.gd<>uid://c4q6riod8pwkr::::res://scenes/poster_dialogue/poster.dialogue<>uid://dqp45m0l6d3ap::::res://scenes/poster_dialogue/using phone scan qr code.png<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn<>uid://bb52rsfwhkxbn::::res://addons/dialogue_manager/dialogue_responses_menu.gd
 poster.dialogue::Resource::6843260904221324965::1792267758::1792267758::1::::<><><>0<>0<>0e8d5f785c7847ac0bd4cd33c5fcd06c<>res://.godot/imported/poster.dialogue-f0d3b0b28641edd43a92216a1d791a9c.tres::uid://dbs4435dsf3ry::::res://addons/dialogue_manager/dialogue_resource.gd
 posterrrr.png::CompressedTexture2D::774634101472467617::1791407883::1791407883::1::::<><><>0<>0<>9f5789b2a443523f83fe6fb866cb5767<>res://.godot/imported/posterrrr.png-521576946cc4057e7495f4b00a0d32b2.ctex::
 using phone scan qr code.png::CompressedTexture2D::8315064251647770791::1792243332::1792243428::1::::<><><>0<>0<>6d89f81871988694fdfcd0e147543afc<>res://.godot/imported/using phone scan qr code.png-fcf608d371eed6ba57d82e93a8be42de.ctex::
-::res://scenes/poster_dialogue (2)/::1792267747
-balloon.gd::GDScript::5049789881400510223::1791408231::0::1::::<>CanvasLayer<><>0<>0<><>::
+::res://scenes/poster_dialogue (2)/::1794520266
+balloon.gd::GDScript::5049789881400510223::1794520262::0::1::::<>CanvasLayer<><>0<>0<><>::
 balloon.tscn::PackedScene::3831662255268843213::1792244720::0::1::::<><><>0<>0<><>::uid://cd7fkiuvw0bjr::::res://scenes/poster_dialogue (2)/balloon.gd<>uid://0dff3ylaypte::::res://scenes/poster_dialogue (2)/poster2.dialogue<>uid://c4v6lk21phxa::::res://scenes/poster_dialogue (2)/phone taking poster photo.png<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn<>uid://bb52rsfwhkxbn::::res://addons/dialogue_manager/dialogue_responses_menu.gd
 phone taking poster photo.png::CompressedTexture2D::201575653069941154::1792243942::1792244375::1::::<><><>0<>0<>59f28dfe0d5ce3a990e65341187b3009<>res://.godot/imported/phone taking poster photo.png-1808c4f020e2673b05367fe2bbf093c1.ctex::
 poster2.dialogue::Resource::1761228246376206694::1792267743::1792267743::1::::<><><>0<>0<>d5d7ae237d085ef1faca6148f1af8d76<>res://.godot/imported/poster2.dialogue-e6eb3fabb48959fa1d2e3530be25f592.tres::uid://dbs4435dsf3ry::::res://addons/dialogue_manager/dialogue_resource.gd
@@ -162,45 +163,46 @@ try.tscn::PackedScene::1250084151337793261::1792283322::0::1::::<><><>0<>0<><>::
 usb.tscn::PackedScene::2869769771875774256::1788373868::0::1::::<><><>0<>0<><>::uid://dq5wdm3tt2aa0::::res://models/assets/risks items/Game USB.glb
 usb_confidential.tscn::PackedScene::3720485665833989806::1792247472::0::1::::<><><>0<>0<><>::uid://bntr63e2jceua::::res://models/assets/risks items/Game USB confidential.glb
 usb_exam.tscn::PackedScene::8209638473383113962::1792247344::0::1::::<><><>0<>0<><>::uid://cprybiewcck30::::res://models/assets/risks items/Game USB final exam Key.glb
-::res://scenes/tiles_dialogue/::1792725544
-::res://scenes/tiles_dialogue/tiles_0clue/::1792725544
+::res://scenes/tiles_dialogue/::1794521408
+::res://scenes/tiles_dialogue/tiles_0clue/::1794521382
 0clue.dialogue::Resource::7935963086101924664::1792267662::1792267662::1::::<><><>0<>0<>b91d370bcde80a13a2a95b44731df64e<>res://.godot/imported/0clue.dialogue-f4f5d6a73f231ae1937a5ce0acd0c1ad.tres::uid://dbs4435dsf3ry::::res://addons/dialogue_manager/dialogue_resource.gd
-balloon.gd::GDScript::4364896398673978662::1792267356::0::1::::<>CanvasLayer<><>0<>0<><>::
+balloon.gd::GDScript::4364896398673978662::1794521378::0::1::::<>CanvasLayer<><>0<>0<><>::
 balloon.tscn::PackedScene::6290976262260069687::1792725540::0::1::::<><><>0<>0<><>::uid://b3gnhadk4ufxu::::res://scenes/tiles_dialogue/tiles_0clue/balloon.gd<>uid://dlcifgmt7r2oi::::res://scenes/tiles_dialogue/tiles_0clue/0clue.dialogue<>uid://c20mfyvhge83u::::res://models/assets/screens/click wisely logo.png<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn<>uid://bb52rsfwhkxbn::::res://addons/dialogue_manager/dialogue_responses_menu.gd
-::res://scenes/tiles_dialogue/tiles_1clue/::1792725544
+::res://scenes/tiles_dialogue/tiles_1clue/::1794521378
 1clue.dialogue::Resource::7339004650093662842::1792266013::1792266013::1::::<><><>0<>0<>59284058d9e66236e372f451b2f98d09<>res://.godot/imported/1clue.dialogue-492a19da02eb06010b7346455564c41e.tres::uid://dbs4435dsf3ry::::res://addons/dialogue_manager/dialogue_resource.gd
-balloon.gd::GDScript::8120077646757743025::1792265435::0::1::::<>CanvasLayer<><>0<>0<><>::
-balloon.tscn::PackedScene::2567114547067112624::1792725540::0::1::::<><><>0<>0<><>::uid://dnxoq0kt8g0qn::::res://scenes/tiles_dialogue/tiles_1clue/balloon.gd<>uid://dctclmrdk3wac::::res://scenes/tiles_dialogue/tiles_1clue/1clue.dialogue<>uid://c20mfyvhge83u::::res://models/assets/screens/click wisely logo.png<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn<>uid://bb52rsfwhkxbn::::res://addons/dialogue_manager/dialogue_responses_menu.gd
-::res://scenes/tiles_dialogue/tiles_2clues/::1792725544
+balloon.gd::GDScript::8120077646757743025::1794521355::0::1::::<>CanvasLayer<><>0<>0<><>::
+balloon.tscn::PackedScene::2567114547067112624::1794521378::0::1::::<><><>0<>0<><>::uid://dnxoq0kt8g0qn::::res://scenes/tiles_dialogue/tiles_1clue/balloon.gd<>uid://dctclmrdk3wac::::res://scenes/tiles_dialogue/tiles_1clue/1clue.dialogue<>uid://c20mfyvhge83u::::res://models/assets/screens/click wisely logo.png<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn<>uid://bb52rsfwhkxbn::::res://addons/dialogue_manager/dialogue_responses_menu.gd
+::res://scenes/tiles_dialogue/tiles_2clues/::1794521408
 2clues.dialogue::Resource::5715862032039398383::1792549024::1792549024::1::::<><><>0<>0<>474b89b4d19d6f998bd23402514c0ed3<>res://.godot/imported/2clues.dialogue-0c6bf56db5e84aba1d104bce0b758b7b.tres::uid://dbs4435dsf3ry::::res://addons/dialogue_manager/dialogue_resource.gd
-balloon.gd::GDScript::5730067217789036259::1792265429::0::1::::<>CanvasLayer<><>0<>0<><>::
+balloon.gd::GDScript::5730067217789036259::1794521405::0::1::::<>CanvasLayer<><>0<>0<><>::
 balloon.tscn::PackedScene::7867620523363436642::1792725540::0::1::::<><><>0<>0<><>::uid://cnvxmtuxu5hup::::res://scenes/tiles_dialogue/tiles_2clues/balloon.gd<>uid://cno2oa6v4s33h::::res://scenes/tiles_dialogue/tiles_2clues/2clues.dialogue<>uid://c20mfyvhge83u::::res://models/assets/screens/click wisely logo.png<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn<>uid://bb52rsfwhkxbn::::res://addons/dialogue_manager/dialogue_responses_menu.gd
-::res://scenes/tiles_dialogue/tiles_3clues/::1792725544
+::res://scenes/tiles_dialogue/tiles_3clues/::1794521408
 3clues_tiles.dialogue::Resource::1303615290836838421::1792549024::1792549024::1::::<><><>0<>0<>2c014ea1edf205f88448e479771551bd<>res://.godot/imported/3clues_tiles.dialogue-f04032f398e26864b86b632ea3d911bd.tres::uid://dbs4435dsf3ry::::res://addons/dialogue_manager/dialogue_resource.gd
-balloon.gd::GDScript::8676404998193826343::1792265421::0::1::::<>CanvasLayer<><>0<>0<><>::
+balloon.gd::GDScript::8676404998193826343::1794521405::0::1::::<>CanvasLayer<><>0<>0<><>::
 balloon.tscn::PackedScene::3823758711015564636::1792725540::0::1::::<><><>0<>0<><>::uid://dvu6ef244kun4::::res://scenes/tiles_dialogue/tiles_3clues/balloon.gd<>uid://stqmarh0wbi8::::res://scenes/tiles_dialogue/tiles_3clues/3clues_tiles.dialogue<>uid://c20mfyvhge83u::::res://models/assets/screens/click wisely logo.png<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn<>uid://bb52rsfwhkxbn::::res://addons/dialogue_manager/dialogue_responses_menu.gd
-::res://scenes/tiles_dialogue/tiles_4clues/::1792725544
+::res://scenes/tiles_dialogue/tiles_4clues/::1794521408
 4clues_tiles.dialogue::Resource::7748416559482345805::1792542823::1792542824::1::::<><><>0<>0<>07f9450d770fc419b6f5185df730699c<>res://.godot/imported/4clues_tiles.dialogue-4560644cb80dfc89ed95fdd9420b005c.tres::uid://dbs4435dsf3ry::::res://addons/dialogue_manager/dialogue_resource.gd
-balloon.gd::GDScript::4061870751797357438::1792265414::0::1::::<>CanvasLayer<><>0<>0<><>::
+balloon.gd::GDScript::4061870751797357438::1794521405::0::1::::<>CanvasLayer<><>0<>0<><>::
 balloon.tscn::PackedScene::3083542129745493749::1792725540::0::1::::<><><>0<>0<><>::uid://bx4uohauoxg7o::::res://scenes/tiles_dialogue/tiles_4clues/balloon.gd<>uid://dinnj2yfi7lht::::res://scenes/tiles_dialogue/tiles_4clues/4clues_tiles.dialogue<>uid://c20mfyvhge83u::::res://models/assets/screens/click wisely logo.png<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn<>uid://bb52rsfwhkxbn::::res://addons/dialogue_manager/dialogue_responses_menu.gd
-::res://scenes/tiles_dialogue/tiles_clear/::1792725544
-balloon.gd::GDScript::7937006540611630698::1792262155::0::1::::<>CanvasLayer<><>0<>0<><>::
+::res://scenes/tiles_dialogue/tiles_clear/::1794521408
+balloon.gd::GDScript::7937006540611630698::1794521405::0::1::::<>CanvasLayer<><>0<>0<><>::
 balloon.tscn::PackedScene::6920252486158930922::1792725540::0::1::::<><><>0<>0<><>::uid://dlc0lq4ggepx7::::res://scenes/tiles_dialogue/tiles_clear/balloon.gd<>uid://cb5pwexjuwrj3::::res://scenes/tiles_dialogue/tiles_clear/clear_tiles.dialogue<>uid://c20mfyvhge83u::::res://models/assets/screens/click wisely logo.png<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn<>uid://bb52rsfwhkxbn::::res://addons/dialogue_manager/dialogue_responses_menu.gd
 clear_tiles.dialogue::Resource::4905911832063864802::1792262353::1792262455::1::::<><><>0<>0<>1063c641b4ee34b8064d9c1a9a155fd1<>res://.godot/imported/clear_tiles.dialogue-019a8297f46f61443f7113d9b7b1a7bd.tres::uid://dbs4435dsf3ry::::res://addons/dialogue_manager/dialogue_resource.gd
-::res://scenes/usb_confidential_dialogue/::1792267733
-balloon.gd::GDScript::6636423068128530492::1792246594::0::1::::<>CanvasLayer<><>0<>0<><>::
+::res://scenes/usb_confidential_dialogue/::1794520859
+balloon.gd::GDScript::6636423068128530492::1794520858::0::1::::<>CanvasLayer<><>0<>0<><>::
 balloon.tscn::PackedScene::9163422586468224971::1792246804::0::1::::<><><>0<>0<><>::uid://c1sy6hum3t5g7::::res://scenes/usb_confidential_dialogue/balloon.gd<>uid://c0bsomp3x7hc7::::res://scenes/usb_confidential_dialogue/usb.dialogue<>uid://du2dj5fv1hlhj::::res://scenes/usb_confidential_dialogue/confidential usb.png<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn<>uid://bb52rsfwhkxbn::::res://addons/dialogue_manager/dialogue_responses_menu.gd
 confidential usb.png::CompressedTexture2D::8618976930736711387::1792246675::1792246728::1::::<><><>0<>0<>1a8628f41985b6eec7f24f3a8bf8040e<>res://.godot/imported/confidential usb.png-12cbdc9e633830f1d759823b442591b2.ctex::
 usb.dialogue::Resource::6530745397831997872::1792267731::1792267731::1::::<><><>0<>0<>432a6f8f1211cffd14da50ed1c6af5c0<>res://.godot/imported/usb.dialogue-1994c6749170fd78acd6bd1415b1d8c6.tres::uid://dbs4435dsf3ry::::res://addons/dialogue_manager/dialogue_resource.gd
-::res://scenes/usb_dialogue/::1792267722
-balloon.gd::GDScript::7528247763557709786::1788388723::0::1::::<>CanvasLayer<><>0<>0<><>::
+::res://scenes/usb_dialogue/::1794520794
+balloon.gd::GDScript::7528247763557709786::1794520791::0::1::::<>CanvasLayer<><>0<>0<><>::
 balloon.tscn::PackedScene::7769928517894158535::1792247060::0::1::::<><><>0<>0<><>::uid://dfi0e10a0jh2q::::res://scenes/usb_dialogue/balloon.gd<>uid://csc5wcn15jfq1::::res://scenes/usb_dialogue/usb.dialogue<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn<>uid://catembewopfmn::::res://scenes/usb_dialogue/regular usb image.png<>uid://bb52rsfwhkxbn::::res://addons/dialogue_manager/dialogue_responses_menu.gd
 regular usb image.png::CompressedTexture2D::4812328901932714065::1792246886::1792246971::1::::<><><>0<>0<>5c7a1263e57a65785b7f64555f8cd11d<>res://.godot/imported/regular usb image.png-81bd8b82ec6a67935c9df825609300b5.ctex::
 usb.dialogue::Resource::6042230231978735094::1792267718::1792267718::1::::<><><>0<>0<>db603ee987b8169e022233c55d024c0b<>res://.godot/imported/usb.dialogue-d5dcfd8c283cdbd67364491c3a7e3dea.tres::uid://dbs4435dsf3ry::::res://addons/dialogue_manager/dialogue_resource.gd
-::res://scenes/usb_exam_dialogue/::1792267702
-balloon.gd::GDScript::7010250397920205008::1792246602::0::1::::<>CanvasLayer<><>0<>0<><>::
-balloon.tscn::PackedScene::2905213850903095897::1792247193::0::1::::<><><>0<>0<><>::uid://c6422gvbpq6ae::::res://scenes/usb_exam_dialogue/balloon.gd<>uid://bx2eekjughcwh::::res://scenes/usb_exam_dialogue/usb.dialogue<>uid://b5drb8w3igrhn::::res://scenes/usb_exam_dialogue/usb final exam image.png<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn<>uid://bb52rsfwhkxbn::::res://addons/dialogue_manager/dialogue_responses_menu.gd
+::res://scenes/usb_exam_dialogue/::1795119796
+balloon.gd::GDScript::7010250397920205008::1794520858::0::1::::<>CanvasLayer<><>0<>0<><>::
+balloon.tscn::PackedScene::2905213850903095897::1795119794::0::1::::<><><>0<>0<><>::uid://c6422gvbpq6ae::::res://scenes/usb_exam_dialogue/balloon.gd<>uid://bx2eekjughcwh::::res://scenes/usb_exam_dialogue/usb.dialogue<>uid://b6apcwx2hw33u::::res://scenes/usb_exam_dialogue/usb salaries image.png<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn<>uid://bb52rsfwhkxbn::::res://addons/dialogue_manager/dialogue_responses_menu.gd
 usb final exam image.png::CompressedTexture2D::4499314869306576879::1792247127::1792247157::1::::<><><>0<>0<>a062eb38c5d07220f871ef7c6f1f2d41<>res://.godot/imported/usb final exam image.png-362dfa39e529bbb014ed2de887fe89d3.ctex::
+usb salaries image.png::CompressedTexture2D::4563190355232625276::1795119770::1795119781::1::::<><><>0<>0<>19b9f9a467f8d11278eb85ec402fbec2<>res://.godot/imported/usb salaries image.png-a325d4b2472df55bd109bc72af5b5798.ctex::
 usb.dialogue::Resource::4056752837927891155::1792267698::1792267698::1::::<><><>0<>0<>b7ed20fe9b2fee95f0f127f8935a8b04<>res://.godot/imported/usb.dialogue-0530a0586cec71441ea8d870d7c90463.tres::uid://dbs4435dsf3ry::::res://addons/dialogue_manager/dialogue_resource.gd
 ::res://script/::1792933288
 confidential_usb_area.gd::GDScript::9063207909795837519::1792727327::0::1::::<>Area3D<><>0<>0<><>::
